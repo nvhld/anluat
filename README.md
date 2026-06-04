@@ -1,13 +1,18 @@
-# An Luật Public Site
+# An Luật Website
 
-Emergency public website for `anluat.com`.
+Public production website for `anluat.com`, with a separate locked review area for internal AI/intake/dashboard previews.
 
 ## Launch scope
 
 - Static company and service information
 - Verified phone contact links
 - About, editorial-status, privacy, robots and sitemap pages
-- No intake form, AI endpoint, admin dashboard or browser-side PII storage
+- No public intake form, AI endpoint, admin dashboard or browser-side PII storage
+- Internal preview routes for founder/team review:
+  - `/noi-bo`
+  - `/thuky`
+  - `/thu-nghiem/intake`
+  - `/thu-nghiem/ai`
 
 ## Local verification
 
@@ -20,11 +25,13 @@ npm run typecheck
 npm run build
 ```
 
+To test internal preview routes locally, set `INTERNAL_REVIEW_CODE` in a local `.env.local`.
+
 ## Vercel deployment
 
 1. Import this directory as a Vercel project.
 2. Keep the detected framework as Next.js.
-3. Deploy without runtime environment variables.
+3. Add `INTERNAL_REVIEW_CODE` to the `Production` environment before deploying internal preview routes.
 4. `anluat.com` and `www.anluat.com` are already attached to the Vercel project.
 5. At the third-party DNS provider, add:
 
@@ -43,6 +50,8 @@ npm run build
 - Both telephone links on desktop and mobile
 - Canonical URLs use `https://anluat.com`
 - Security headers are present
-- No `/api/gemini/analyze`, intake or admin route is publicly available
+- Unauthenticated access to `/thuky` and `/thu-nghiem/*` redirects to `/noi-bo`
+- Internal review code grants access to `/thuky`, `/thu-nghiem/intake`, `/thu-nghiem/ai`
+- No `/api/gemini/analyze` or production intake/admin workflow is publicly available
 
 Current production alias: `https://anluatcom.vercel.app`

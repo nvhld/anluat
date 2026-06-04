@@ -12,7 +12,7 @@ const securityHeaders = [
       "base-uri 'self'",
       "connect-src 'self'",
       "font-src 'self' data:",
-      "form-action 'none'",
+      "form-action 'self'",
       "frame-ancestors 'none'",
       "img-src 'self' data:",
       "object-src 'none'",
