@@ -23,6 +23,13 @@ export type PracticePageContent = {
   relatedLinks?: Array<{ label: string; href: string }>;
 };
 
+export type InsightArticle = {
+  title: string;
+  summary: string;
+  href: string;
+  category: string;
+};
+
 export const mainNavigation: NavigationItem[] = [
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
   { label: 'Cá nhân', href: '/ca-nhan/gia-dinh-ly-hon' },
@@ -36,7 +43,7 @@ export const mainNavigation: NavigationItem[] = [
 export const footerLinks: NavigationItem[] = [
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
   { label: 'Liên hệ', href: '/lien-he' },
-  { label: 'Chuyện nghề', href: '/chuyen-nghe' },
+  { label: 'Góc chia sẻ', href: '/goc-chia-se' },
   { label: 'Quyền riêng tư', href: '/quyen-rieng-tu' },
 ];
 
@@ -114,6 +121,37 @@ export const contactFlow = [
   {
     title: 'Chuẩn bị cho buổi trao đổi tiếp theo',
     body: 'Nếu cần, An Luật sẽ hướng dẫn giấy tờ và mốc thời gian nên chuẩn bị để buổi làm việc tiếp theo đi đúng trọng tâm.',
+  },
+];
+
+export const insightArticles: InsightArticle[] = [
+  {
+    category: 'Doanh nghiệp',
+    title: 'Tư vấn pháp lý thường xuyên cho doanh nghiệp không phải là “có việc mới gọi”.',
+    summary:
+      'Khi pháp lý chỉ xuất hiện sau sự cố, doanh nghiệp thường phải trả giá bằng thời gian và những quyết định bị động hơn nhiều.',
+    href: '/doanh-nghiep/tu-van-thuong-xuyen',
+  },
+  {
+    category: 'Hợp đồng',
+    title: 'Hợp đồng tốt không phải là hợp đồng dài. Hợp đồng tốt là hợp đồng các bên hiểu giống nhau trước khi ký.',
+    summary:
+      'Một bản hợp đồng rõ nghĩa và sát giao dịch thực tế thường giúp doanh nghiệp tránh tranh chấp hiệu quả hơn nhiều câu chữ phức tạp.',
+    href: '/doanh-nghiep/hop-dong',
+  },
+  {
+    category: 'Lao động',
+    title: 'Nhiều tranh chấp lao động không bắt đầu ở tòa, mà bắt đầu từ hồ sơ và quy trình nội bộ.',
+    summary:
+      'Chuẩn hóa hợp đồng, kỷ luật, thang bảng lương và cách trao đổi là việc phòng ngừa rẻ hơn rất nhiều so với xử lý muộn.',
+    href: '/lao-dong-nhan-su/doanh-nghiep-hr',
+  },
+  {
+    category: 'Tranh chấp',
+    title: 'Thu hồi nợ đúng luật là bài toán vừa cần tốc độ, vừa cần giữ chứng cứ và đường lui.',
+    summary:
+      'Không phải khoản nợ nào cũng nên nhảy ngay vào khởi kiện; việc đánh giá hồ sơ và chiến lược thương lượng đúng lúc quan trọng không kém.',
+    href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong',
   },
 ];
 
@@ -327,6 +365,312 @@ export const practicePages: PracticePageContent[] = [
     secondaryCtaHref: '/doanh-nghiep',
   },
   {
+    href: '/lao-dong-nhan-su/nguoi-lao-dong',
+    navLabel: 'Người lao động',
+    eyebrow: 'Lao động & nhân sự',
+    title: 'Dành cho người lao động cần hiểu đúng quyền lợi và bước đi tiếp theo',
+    summary:
+      'Phù hợp khi bạn đang gặp vấn đề về nghỉ việc, chấm dứt hợp đồng, lương thưởng, bảo hiểm, kỷ luật hoặc một quyết định nhân sự khiến bạn không chắc mình đang ở vị thế nào.',
+    intro:
+      'Nhiều người lao động tìm đến luật sư khi mọi thứ đã khá căng. Nhưng ngay cả trước khi tranh chấp đi xa, một buổi trao đổi đúng trọng tâm có thể giúp bạn biết giấy tờ nào nên giữ, điều gì nên nói và bước nào chưa nên vội.',
+    commonSituations: [
+      'Bạn nhận thông báo nghỉ việc, chấm dứt hợp đồng hoặc đề nghị thỏa thuận mà chưa hiểu hết hệ quả.',
+      'Bạn bị xử lý kỷ luật, chuyển vị trí, cắt quyền lợi hoặc bị gây áp lực trong môi trường làm việc.',
+      'Bạn gặp vấn đề về lương, trợ cấp, bảo hiểm xã hội, nghĩa vụ bồi thường hoặc thời giờ làm việc.',
+      'Bạn muốn biết nên thương lượng, yêu cầu bằng văn bản hay chuẩn bị hồ sơ cho bước tiếp theo.',
+    ],
+    supportScope: [
+      'Làm rõ quyền lợi, nghĩa vụ và điểm nào đang cần kiểm tra lại trong hồ sơ lao động.',
+      'Xem xét hợp đồng, quyết định, email, tin nhắn hoặc biên bản liên quan.',
+      'Định hướng cách chuẩn bị tài liệu và ứng xử phù hợp trước khi tranh chấp đi xa hơn.',
+      'Xác định khi nào nên tiếp tục thương lượng, khi nào nên nhờ An Luật hỗ trợ sâu hơn.',
+    ],
+    strengths: [
+      'Cách tiếp cận của An Luật ưu tiên giúp người lao động hiểu tình thế của mình trước, thay vì chỉ phản ứng theo cảm xúc.',
+      'Giải thích bằng ngôn ngữ đời thường để bạn biết mình đang nắm gì và còn thiếu gì.',
+      'Không hứa kết quả, nhưng giúp bạn bớt mù mờ trước những quyết định có thể ảnh hưởng lâu dài.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho người lao động',
+    checklistItems: [
+      'Hợp đồng lao động, phụ lục hợp đồng hoặc thỏa thuận thử việc nếu có.',
+      'Thông báo, quyết định kỷ luật, nghỉ việc, điều chuyển hoặc các trao đổi từ công ty.',
+      'Bảng lương, bảng chấm công, hồ sơ bảo hiểm hoặc chứng từ liên quan quyền lợi.',
+      'Tin nhắn, email, biên bản họp hoặc ghi chú về các sự kiện quan trọng.',
+      'Mốc thời gian: ngày vào làm, thời điểm phát sinh vấn đề, ngày nhận thông báo.',
+    ],
+    faq: [
+      {
+        question: 'Nếu tôi chỉ mới nghi ngờ quyền lợi của mình bị ảnh hưởng thì có nên liên hệ không?',
+        answer:
+          'Có. Giai đoạn “chưa chắc nhưng thấy có gì đó không ổn” thường là lúc hữu ích nhất để rà lại hồ sơ và cách chuẩn bị phản hồi.',
+      },
+      {
+        question: 'Tôi chưa muốn đẩy sự việc lên mức tranh chấp thì sao?',
+        answer:
+          'Không phải bước đầu nào cũng cần đẩy vụ việc đi xa. Nhiều trường hợp cần hiểu đúng vị thế và chuẩn bị tài liệu trước khi chọn cách trao đổi phù hợp.',
+      },
+    ],
+    primaryCtaLabel: 'Liên hệ để An Luật gọi lại',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Lao động & Nhân sự',
+    secondaryCtaHref: '/lao-dong-nhan-su',
+  },
+  {
+    href: '/lao-dong-nhan-su/doanh-nghiep-hr',
+    navLabel: 'Doanh nghiệp / HR',
+    eyebrow: 'Lao động & nhân sự',
+    title: 'Dành cho doanh nghiệp và HR cần xử lý nhân sự đúng luật nhưng vẫn vận hành được',
+    summary:
+      'Trang này phù hợp khi doanh nghiệp hoặc bộ phận HR đang cần chuẩn hóa hợp đồng, nội quy, kỷ luật, chấm dứt hợp đồng, tái cấu trúc hoặc giảm rủi ro lao động trước khi sự việc bùng lên.',
+    intro:
+      'Quan hệ lao động là nơi pháp lý và vận hành gặp nhau rất rõ. Nếu hồ sơ, quy trình và cách trao đổi không đi cùng nhau, doanh nghiệp thường rơi vào tình thế vừa mất người vừa tăng rủi ro.',
+    commonSituations: [
+      'Doanh nghiệp cần xử lý kỷ luật, chấm dứt hợp đồng hoặc cơ cấu lại nhân sự.',
+      'Hồ sơ lao động, nội quy, thang bảng lương hoặc quy trình làm việc đang thiếu đồng bộ.',
+      'Có tranh chấp, khiếu nại hoặc dấu hiệu bất ổn trong quan hệ lao động.',
+      'HR cần một điểm tựa pháp lý rõ ràng để không phải tự xoay trong các tình huống nhạy cảm.',
+    ],
+    supportScope: [
+      'Rà soát hồ sơ lao động, hợp đồng, nội quy và quy trình đang áp dụng.',
+      'Đề xuất cách xử lý phù hợp cho từng tình huống kỷ luật, chấm dứt hoặc tái cấu trúc.',
+      'Hỗ trợ chuẩn hóa mẫu biểu và quy trình để giảm rủi ro phát sinh về sau.',
+      'Cùng doanh nghiệp cân bằng giữa tuân thủ pháp luật và thực tế vận hành nhân sự.',
+    ],
+    strengths: [
+      'An Luật có kinh nghiệm dài với doanh nghiệp, HR và các chương trình đào tạo về quan hệ lao động.',
+      'Không chỉ nhìn vào điều khoản pháp luật, mà còn nhìn vào khả năng doanh nghiệp thực sự triển khai được.',
+      'Giúp doanh nghiệp bớt phụ thuộc vào những phản ứng chữa cháy mỗi khi có vấn đề nhân sự.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho doanh nghiệp / HR',
+    checklistItems: [
+      'Mẫu hợp đồng lao động, phụ lục, nội quy, quy chế lương thưởng hoặc kỷ luật.',
+      'Thông báo, quyết định hoặc biên bản liên quan sự việc đang cần xử lý.',
+      'Thông tin cơ cấu nhân sự, phòng ban, vị trí và tác động vận hành nếu có.',
+      'Mốc thời gian quan trọng: ngày thông báo, hạn phản hồi, ngày dự kiến xử lý.',
+      'Mục tiêu rõ của doanh nghiệp: xử lý một vụ việc cụ thể hay chuẩn hóa lại hệ thống.',
+    ],
+    faq: [
+      {
+        question: 'Doanh nghiệp có thể rà soát từ sớm trước khi xảy ra tranh chấp không?',
+        answer:
+          'Có. Đó thường là cách hiệu quả nhất để giảm rủi ro, nhất là khi doanh nghiệp đang tăng trưởng hoặc chuẩn bị thay đổi lớn về nhân sự.',
+      },
+      {
+        question: 'HR có thể liên hệ ngay cả khi cần trao đổi kín trước với luật sư không?',
+        answer:
+          'Có. Bước đầu có thể chỉ là một cuộc trao đổi đủ ngắn để xác định phạm vi vấn đề và người phụ trách phù hợp.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi với An Luật về bài toán HR',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Lao động & Nhân sự',
+    secondaryCtaHref: '/lao-dong-nhan-su',
+  },
+  {
+    href: '/doanh-nghiep/tu-van-thuong-xuyen',
+    navLabel: 'Tư vấn thường xuyên',
+    eyebrow: 'Doanh nghiệp',
+    title: 'Tư vấn pháp lý thường xuyên để doanh nghiệp không chỉ gọi luật sư khi đã có sự cố',
+    summary:
+      'Đây là dịch vụ dành cho doanh nghiệp muốn có một đơn vị pháp lý đồng hành cùng hoạt động vận hành, để chủ động ngăn ngừa và loại bỏ rủi ro thay vì chỉ phản ứng khi vấn đề đã bùng lên.',
+    intro:
+      'Tư vấn pháp lý thường xuyên không phải là một chiếc hộp thư để “có việc thì hỏi”. Giá trị thật của nó nằm ở chỗ luật sư hiểu cách doanh nghiệp vận hành, nhìn ra điểm hở và hỗ trợ kịp thời trước khi rủi ro biến thành thiệt hại.',
+    commonSituations: [
+      'Doanh nghiệp cần người đồng hành để rà soát hợp đồng, xử lý phát sinh với đối tác hoặc kiểm tra quyết định nội bộ.',
+      'CEO, founder hoặc quản lý đang phải tự cân đối quá nhiều quyết định mà thiếu điểm tựa pháp lý thường xuyên.',
+      'Doanh nghiệp muốn có lộ trình tư vấn rõ ràng thay vì xử lý từng vụ việc rời rạc.',
+      'Hoạt động kinh doanh thay đổi nhanh, kéo theo các vùng rủi ro mới ở nhân sự, cổ đông, công nợ hoặc giao dịch.',
+    ],
+    supportScope: [
+      'Đồng hành theo nhịp hoạt động thực tế của doanh nghiệp thay vì chỉ nhận từng câu hỏi lẻ.',
+      'Đưa ý kiến pháp lý chất lượng, phù hợp và tối ưu cho từng bối cảnh cụ thể.',
+      'Chủ động rà soát các điểm có nguy cơ phát sinh tranh chấp hoặc vi phạm.',
+      'Kết nối với các dịch vụ sâu hơn của An Luật khi doanh nghiệp cần đi vào hợp đồng, nhân sự, tranh chấp hoặc M&A.',
+    ],
+    strengths: [
+      'An Luật đã triển khai dịch vụ này nhiều năm và xem đây là một trong những năng lực cốt lõi cho doanh nghiệp đang vận hành.',
+      'Không chỉ trả lời câu hỏi, mà còn xây lộ trình tư vấn phù hợp với từng doanh nghiệp.',
+      'Ưu tiên sự am hiểu doanh nghiệp đang tư vấn để lời khuyên không bị chung chung.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tư vấn pháp lý thường xuyên',
+    checklistItems: [
+      'Mô tả ngắn về doanh nghiệp, lĩnh vực hoạt động và quy mô hiện tại.',
+      'Những nhóm vấn đề đang phát sinh nhiều nhất: hợp đồng, nhân sự, công nợ, cổ đông, giấy phép hoặc vận hành.',
+      'Các hồ sơ nội bộ hoặc mẫu tài liệu doanh nghiệp đang sử dụng.',
+      'Kỳ vọng của doanh nghiệp: phản hồi tình huống, rà soát định kỳ hay xây lộ trình pháp lý.',
+      'Những thời điểm hoặc quyết định lớn sắp tới mà doanh nghiệp muốn chuẩn bị trước.',
+    ],
+    faq: [
+      {
+        question: 'Tư vấn thường xuyên có phù hợp với doanh nghiệp vừa và nhỏ không?',
+        answer:
+          'Có. Quy mô không phải là tiêu chí duy nhất. Quan trọng là doanh nghiệp có nhiều quyết định pháp lý lặp lại và muốn xử lý chủ động hơn.',
+      },
+      {
+        question: 'Nếu doanh nghiệp mới chỉ cần hỗ trợ ở vài mảng, có bắt buộc mở rộng toàn bộ không?',
+        answer:
+          'Không. An Luật có thể bắt đầu từ những mảng phát sinh nhiều nhất rồi điều chỉnh phạm vi đồng hành theo thực tế.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tư vấn thường xuyên',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/doanh-nghiep/hop-dong',
+    navLabel: 'Hợp đồng',
+    eyebrow: 'Doanh nghiệp',
+    title: 'Hợp đồng không chỉ để ký cho xong, mà để các bên hiểu giống nhau trước khi có tranh chấp',
+    summary:
+      'Trang này dành cho doanh nghiệp cần soạn thảo hoặc rà soát hợp đồng dựa trên giao dịch thật, ngành nghề thật và những rủi ro thật có thể phát sinh sau khi ký.',
+    intro:
+      'An Luật không xem hợp đồng là cuộc đua về số trang hay mức độ khó hiểu. Hợp đồng tốt là hợp đồng diễn đạt đúng thỏa thuận, dự liệu được rủi ro và giúp các bên hiểu giống nhau ngay từ đầu.',
+    commonSituations: [
+      'Doanh nghiệp đang dùng mẫu hợp đồng cũ, dịch từ nguồn khác hoặc không còn sát giao dịch thực tế.',
+      'Một giao dịch mới có nhiều điểm thương lượng nhưng chưa biết điều khoản nào cần giữ chặt.',
+      'Doanh nghiệp từng có tranh chấp và muốn chỉnh lại cách soạn hợp đồng để không lặp lại.',
+      'Bộ phận kinh doanh cần một bản hợp đồng vừa rõ để dùng, vừa đủ chặt để bảo vệ lợi ích.',
+    ],
+    supportScope: [
+      'Soạn thảo hoặc rà soát hợp đồng theo đúng loại giao dịch và ngành nghề doanh nghiệp đang làm.',
+      'Giúp dự liệu tình huống có thể phát sinh và cách thể hiện điều khoản rõ hơn.',
+      'Làm rõ quyền, nghĩa vụ, điều kiện thanh toán, vi phạm, bồi thường và cơ chế giải quyết tranh chấp.',
+      'Cân bằng giữa độ chặt pháp lý và khả năng sử dụng thực tế của doanh nghiệp.',
+    ],
+    strengths: [
+      'An Luật có kinh nghiệm song hành cùng nhiều giao dịch của khách hàng trong kinh doanh thương mại.',
+      'Không dùng số trang hay ngôn ngữ rối rắm để tạo cảm giác chuyên môn.',
+      'Tập trung vào việc các bên hiểu tường tận nội dung mình đang cam kết.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho soạn thảo / rà soát hợp đồng',
+    checklistItems: [
+      'Bản hợp đồng hiện có, phụ lục hoặc các mẫu đang sử dụng nếu có.',
+      'Tóm tắt giao dịch thật: ai là bên tham gia, hàng hóa/dịch vụ gì, mốc thanh toán, trách nhiệm thực hiện.',
+      'Những điều doanh nghiệp đang lo nhất: giao hàng, thanh toán, phạt vi phạm, bồi thường, chấm dứt, bảo mật.',
+      'Bài học từ các giao dịch trước hoặc tranh chấp đã từng xảy ra nếu có.',
+      'Thời điểm cần hoàn thành hợp đồng hoặc vòng thương lượng tiếp theo.',
+    ],
+    faq: [
+      {
+        question: 'Nếu hai bên đã chốt gần hết điều khoản, còn cần luật sư rà soát không?',
+        answer:
+          'Có thể rất nên. Nhiều rủi ro nằm ở cách diễn đạt và mối liên hệ giữa các điều khoản, chứ không chỉ ở việc “đã có đủ mục chưa”.',
+      },
+      {
+        question: 'An Luật có soạn lại toàn bộ hay chỉ rà soát những phần cần sửa?',
+        answer:
+          'Tùy tình trạng tài liệu hiện tại. Có trường hợp chỉ cần tinh chỉnh, nhưng cũng có lúc nên làm lại gọn hơn để tránh chắp vá quá nhiều.',
+      },
+    ],
+    primaryCtaLabel: 'Liên hệ về hợp đồng',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong',
+    navLabel: 'Thu hồi nợ / thương lượng',
+    eyebrow: 'Tranh tụng & thu hồi nợ',
+    title: 'Thu hồi nợ đúng luật, giữ chứng cứ và giữ cả đường lui nếu còn cần',
+    summary:
+      'Phù hợp khi bạn hoặc doanh nghiệp đang cần thu hồi khoản nợ khó đòi, muốn đánh giá nên thương lượng thế nào, gửi văn bản ra sao hay chuẩn bị cho bước khởi kiện và thi hành án khi cần.',
+    intro:
+      'Thu hồi nợ là một trong những dịch vụ gắn với An Luật từ rất sớm. Điểm khó không chỉ nằm ở số tiền, mà ở cách sắp chiến lược: gây đủ áp lực, giữ đủ chứng cứ và không tự đẩy mình vào thế khó hơn về sau.',
+    commonSituations: [
+      'Đối tác hoặc bên vay liên tục hứa thanh toán nhưng không thực hiện.',
+      'Chứng từ giao dịch có nhưng đang rời rạc, không biết đã đủ mạnh chưa.',
+      'Doanh nghiệp muốn thu hồi nợ nhưng vẫn cân nhắc giữ quan hệ kinh doanh.',
+      'Vụ việc đã sang giai đoạn cần gửi văn bản, khởi kiện hoặc theo dõi thi hành án.',
+    ],
+    supportScope: [
+      'Đánh giá bộ chứng cứ giao dịch và nghĩa vụ thanh toán hiện có.',
+      'Đề xuất cách thương lượng, gửi văn bản hoặc tăng áp lực đúng luật.',
+      'Chuẩn bị cho phương án khởi kiện và thi hành án khi cần.',
+      'Giúp khách hàng hiểu bài toán thực tế giữa thời gian, chi phí và khả năng thu hồi.',
+    ],
+    strengths: [
+      'An Luật đã triển khai dịch vụ này từ rất sớm và tích lũy nhiều kinh nghiệm thực tế.',
+      'Ưu tiên giải pháp phù hợp, không đẩy khách hàng vào những bước quá nặng khi chưa cần.',
+      'Nhìn vụ việc từ góc độ chiến lược, không chỉ từ góc độ thủ tục.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho thu hồi nợ / thương lượng',
+    checklistItems: [
+      'Hợp đồng, đơn hàng, xác nhận công nợ, biên bản giao nhận hoặc chứng từ thanh toán.',
+      'Email, tin nhắn, thông báo, văn bản đòi nợ hoặc cam kết trả nợ trước đó.',
+      'Thông tin bên còn nợ: pháp nhân/cá nhân, người đại diện, địa chỉ hoặc đầu mối liên hệ.',
+      'Số tiền, thời hạn chậm trả và các mốc thương lượng đã diễn ra.',
+      'Mục tiêu ưu tiên: thu nhanh, giữ quan hệ hay chuẩn bị cho bước tố tụng.',
+    ],
+    faq: [
+      {
+        question: 'Có phải cứ đòi nợ là phải khởi kiện ngay không?',
+        answer:
+          'Không. Nhiều khoản nợ cần đánh giá lại chứng cứ và chiến lược thương lượng trước. Khởi kiện là một bước lớn, không phải lúc nào cũng nên là bước đầu tiên.',
+      },
+      {
+        question: 'Nếu chứng từ chưa đủ đẹp thì còn cơ hội không?',
+        answer:
+          'Còn tùy vụ việc, nhưng việc rà lại chứng cứ ngay từ đầu thường giúp xác định còn thiếu gì và còn kịp bổ sung hay không.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về khoản nợ',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Tranh tụng & Thu hồi nợ',
+    secondaryCtaHref: '/tranh-tung-thu-hoi-no',
+  },
+  {
+    href: '/tranh-tung-thu-hoi-no/tranh-chap-kinh-doanh',
+    navLabel: 'Tranh chấp kinh doanh',
+    eyebrow: 'Tranh tụng & thu hồi nợ',
+    title: 'Tranh chấp kinh doanh cần một cái nhìn đủ toàn diện trước khi đi tiếp',
+    summary:
+      'Trang này phù hợp khi doanh nghiệp hoặc cá nhân đang ở trong tranh chấp hợp đồng, nghĩa vụ thanh toán, hợp tác kinh doanh, bảo hiểm hay các mâu thuẫn thương mại đã không còn giải quyết được bằng trao đổi thông thường.',
+    intro:
+      'Trong tranh chấp kinh doanh, điều khách hàng thường cần không chỉ là biết “đúng sai”, mà là biết mình đang đứng ở đâu, hồ sơ mạnh đến đâu và chọn bước nào tối ưu nhất trong bối cảnh thật của giao dịch.',
+    commonSituations: [
+      'Tranh chấp nghĩa vụ thanh toán, giao hàng, chất lượng, tiến độ hoặc vi phạm cam kết.',
+      'Tranh chấp hợp đồng hợp tác kinh doanh, bảo hiểm hoặc giao dịch thương mại khác.',
+      'Hai bên đã thương lượng nhiều nhưng không còn tiến triển.',
+      'Doanh nghiệp cần chuẩn bị hồ sơ trước khi vào tòa hoặc cơ chế giải quyết tranh chấp khác.',
+    ],
+    supportScope: [
+      'Đọc lại giao dịch dưới góc nhìn pháp lý và chiến lược xử lý thực tế.',
+      'Rà soát hợp đồng, chứng từ, trao đổi và các tài liệu quan trọng để xác định hướng đi.',
+      'Đề xuất cách thương lượng tiếp, gửi văn bản, chuẩn bị hồ sơ hoặc tham gia tố tụng.',
+      'Giúp doanh nghiệp nhìn rõ chi phí, thời gian và mức độ ưu tiên của từng phương án.',
+    ],
+    strengths: [
+      'An Luật có kinh nghiệm thực tiễn với tranh chấp kinh doanh thương mại tại tòa.',
+      'Không hứa kết quả ngoài tầm kiểm soát, nhưng luôn giúp khách hàng nhìn toàn cảnh hơn trước khi quyết định.',
+      'Kết hợp giữa hiểu hồ sơ, hiểu vận hành doanh nghiệp và hiểu tác động dài hạn của tranh chấp.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tranh chấp kinh doanh',
+    checklistItems: [
+      'Hợp đồng, phụ lục, đơn hàng, biên bản làm việc, hóa đơn hoặc chứng từ thanh toán.',
+      'Email, tin nhắn, thông báo và các trao đổi thể hiện quá trình thực hiện giao dịch.',
+      'Tóm tắt mâu thuẫn chính: nghĩa vụ nào bị vi phạm, từ thời điểm nào, hậu quả gì đang xảy ra.',
+      'Những bước hai bên đã thử: thương lượng, văn bản, khiếu nại, đối chất hoặc làm việc với cơ quan nào đó.',
+      'Mục tiêu ưu tiên của doanh nghiệp: tiếp tục giao dịch, dừng giao dịch, thu tiền hay chuẩn bị tranh tụng.',
+    ],
+    faq: [
+      {
+        question: 'Nếu chưa chắc hồ sơ mình mạnh hay yếu thì có nên nói chuyện với luật sư không?',
+        answer:
+          'Có. Đó chính là giá trị lớn của bước đánh giá ban đầu: biết mình đang ở đâu trước khi tự đẩy vụ việc đi quá xa.',
+      },
+      {
+        question: 'Doanh nghiệp có thể vừa thương lượng vừa chuẩn bị cho tranh tụng không?',
+        answer:
+          'Có thể. Trong nhiều vụ việc, chuẩn bị kỹ hồ sơ giúp thương lượng tốt hơn ngay cả khi chưa cần nộp đơn ngay.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tranh chấp kinh doanh',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Tranh tụng & Thu hồi nợ',
+    secondaryCtaHref: '/tranh-tung-thu-hoi-no',
+  },
+  {
     href: '/tranh-tung-thu-hoi-no',
     navLabel: 'Tranh tụng & Thu hồi nợ',
     eyebrow: 'Tranh chấp, kiện tụng, thu hồi nợ',
@@ -376,5 +720,9 @@ export const practicePages: PracticePageContent[] = [
     primaryCtaHref: '/lien-he',
     secondaryCtaLabel: 'Xem dịch vụ cho doanh nghiệp',
     secondaryCtaHref: '/doanh-nghiep',
+    relatedLinks: [
+      { label: 'Thu hồi nợ / thương lượng', href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong' },
+      { label: 'Tranh chấp kinh doanh', href: '/tranh-tung-thu-hoi-no/tranh-chap-kinh-doanh' },
+    ],
   },
 ];
