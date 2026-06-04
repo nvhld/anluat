@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   Flower,
   Gavel,
+  GraduationCap,
   Landmark,
   PhoneCall,
   Scale,
@@ -22,7 +23,7 @@ const practices = [
     description: 'Ly hôn, quyền nuôi con, chia tài sản, thừa kế và những tình huống cần được định hướng riêng trước.',
     icon: Users,
     color: 'bg-amber-50 border-amber-100 text-amber-800',
-    href: '/ca-nhan/gia-dinh-ly-hon',
+    href: '/ca-nhan',
   },
   {
     title: 'Lao động & nhân sự',
@@ -44,6 +45,13 @@ const practices = [
     icon: Gavel,
     color: 'bg-rose-50 border-rose-100 text-rose-800',
     href: '/tranh-tung-thu-hoi-no',
+  },
+  {
+    title: 'Đào tạo & sức khỏe pháp lý',
+    description: 'Đào tạo nội bộ, workshop và chương trình cộng đồng để đội ngũ nhận diện rủi ro sớm và làm việc chắc hơn.',
+    icon: GraduationCap,
+    color: 'bg-violet-50 border-violet-100 text-violet-800',
+    href: '/dao-tao',
   },
 ];
 
@@ -127,7 +135,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {practices.map((practice) => (
                 <Link key={practice.title} href={practice.href} className={`rounded-3xl border p-7 transition-transform hover:-translate-y-0.5 md:p-8 ${practice.color}`}>
                   <practice.icon size={24} />
@@ -206,6 +214,9 @@ export default function HomePage() {
               </Link>
               <Link href="/luat-su-dinh-thi-quynh-nhu" className="text-sm font-bold text-brand-primary">
                 Hồ sơ Luật sư Quỳnh Như
+              </Link>
+              <Link href="/dao-tao" className="text-sm font-bold text-brand-primary">
+                Chương trình đào tạo
               </Link>
             </div>
           </div>

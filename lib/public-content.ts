@@ -32,7 +32,7 @@ export type InsightArticle = {
 
 export const mainNavigation: NavigationItem[] = [
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
-  { label: 'Cá nhân', href: '/ca-nhan/gia-dinh-ly-hon' },
+  { label: 'Cá nhân', href: '/ca-nhan' },
   { label: 'Lao động & Nhân sự', href: '/lao-dong-nhan-su' },
   { label: 'Doanh nghiệp', href: '/doanh-nghiep' },
   { label: 'Tranh tụng & Thu hồi nợ', href: '/tranh-tung-thu-hoi-no' },
@@ -157,6 +157,63 @@ export const insightArticles: InsightArticle[] = [
 
 export const practicePages: PracticePageContent[] = [
   {
+    href: '/ca-nhan',
+    navLabel: 'Cá nhân',
+    eyebrow: 'Cá nhân & gia đình',
+    title: 'Cá nhân cần một điểm bắt đầu đủ bình tĩnh trước khi đi tiếp',
+    summary:
+      'Trang này dành cho người đang rối chuyện gia đình, tài sản, thừa kế, tranh chấp dân sự hoặc công nợ cá nhân và cần một nơi để nhìn rõ vấn đề trước khi quyết định.',
+    intro:
+      'Khi câu chuyện pháp lý gắn trực tiếp với gia đình, tiền bạc hoặc danh dự cá nhân, điều người ta cần đầu tiên thường không phải là một danh sách điều luật. Điều cần hơn là một lối vào rõ ràng, kín kẽ và giúp mình biết nên bắt đầu từ đâu.',
+    commonSituations: [
+      'Đang cân nhắc ly hôn, tranh chấp quyền nuôi con hoặc cần làm rõ tài sản chung riêng.',
+      'Có mâu thuẫn về thừa kế, di chúc, nhà đất hoặc quyền sở hữu tài sản trong gia đình.',
+      'Phát sinh tranh chấp dân sự nhưng chưa biết nên thương lượng, gửi văn bản hay chuẩn bị hồ sơ sâu hơn.',
+      'Cần thu hồi một khoản nợ cá nhân nhưng không muốn tự đẩy mình vào cách làm rủi ro.',
+    ],
+    supportScope: [
+      'Giúp xác định vụ việc đang nghiêng về nhóm gia đình, tài sản, dân sự hay công nợ cá nhân.',
+      'Làm rõ giấy tờ nào quan trọng trước, giấy tờ nào có thể bổ sung sau.',
+      'Đề xuất hướng đi phù hợp hơn với bối cảnh thật của từng người: gặp riêng, thương lượng hay chuẩn bị hồ sơ.',
+      'Giữ nhịp trao đổi rõ ràng và kín kẽ cho những vụ việc nhạy cảm.',
+    ],
+    strengths: [
+      'An Luật tiếp nhận các câu chuyện cá nhân bằng thái độ cởi mở, không ép khách hàng phải “nói cho đúng thuật ngữ”.',
+      'Giải thích vấn đề bằng ngôn ngữ đời thường trước khi đi vào phân tích pháp lý sâu hơn.',
+      'Giúp khách hàng nhìn rõ bước kế tiếp thay vì bị ngợp trong quá nhiều khả năng cùng lúc.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị chung cho khách hàng cá nhân',
+    checklistItems: [
+      'Tóm tắt sự việc theo mốc thời gian càng đơn giản càng tốt.',
+      'Giấy tờ đang có trong tay: giấy tờ nhân thân, tài sản, hợp đồng, tin nhắn, email, biên nhận.',
+      'Những bên liên quan chính và vai trò của họ trong câu chuyện.',
+      'Điều bạn đang lo nhất hoặc điều bạn muốn đạt được sau buổi trao đổi đầu tiên.',
+      'Các thời hạn gấp nếu có: lịch làm việc, hạn phản hồi, hạn nộp tài liệu.',
+    ],
+    faq: [
+      {
+        question: 'Tôi chưa biết vụ việc của mình thuộc mảng nào thì có sao không?',
+        answer:
+          'Không sao. Đây chính là lý do trang Cá nhân tồn tại: để bạn có một điểm bắt đầu trước khi phải tự phân loại câu chuyện của mình quá sớm.',
+      },
+      {
+        question: 'An Luật có nhận những vụ việc rất nhạy cảm không?',
+        answer:
+          'Có thể, nhưng cách tiếp nhận sẽ được cân nhắc kỹ hơn về mức độ bảo mật, người phụ trách và nhịp làm việc phù hợp.',
+      },
+    ],
+    primaryCtaLabel: 'Tìm hiểu 1 GIỜ GẶP NHƯ',
+    primaryCtaHref: '/1-gio-gap-nhu',
+    secondaryCtaLabel: 'Liên hệ trực tiếp với An Luật',
+    secondaryCtaHref: '/lien-he',
+    relatedLinks: [
+      { label: 'Gia đình, ly hôn, tài sản và thừa kế', href: '/ca-nhan/gia-dinh-ly-hon' },
+      { label: 'Tài sản & thừa kế', href: '/ca-nhan/tai-san-thua-ke' },
+      { label: 'Tranh chấp dân sự', href: '/ca-nhan/tranh-chap-dan-su' },
+      { label: 'Thu hồi nợ cá nhân', href: '/ca-nhan/thu-hoi-no-ca-nhan' },
+    ],
+  },
+  {
     href: '/ca-nhan/gia-dinh-ly-hon',
     navLabel: 'Cá nhân',
     eyebrow: 'Cá nhân & gia đình',
@@ -206,6 +263,164 @@ export const practicePages: PracticePageContent[] = [
     primaryCtaHref: '/1-gio-gap-nhu',
     secondaryCtaLabel: 'Liên hệ trực tiếp với An Luật',
     secondaryCtaHref: '/lien-he',
+    relatedLinks: [
+      { label: 'Tài sản & thừa kế', href: '/ca-nhan/tai-san-thua-ke' },
+      { label: 'Tranh chấp dân sự', href: '/ca-nhan/tranh-chap-dan-su' },
+      { label: 'Thu hồi nợ cá nhân', href: '/ca-nhan/thu-hoi-no-ca-nhan' },
+    ],
+  },
+  {
+    href: '/ca-nhan/tai-san-thua-ke',
+    navLabel: 'Tài sản & thừa kế',
+    eyebrow: 'Cá nhân & gia đình',
+    title: 'Tài sản và thừa kế cần được nhìn bằng cả giấy tờ lẫn bối cảnh gia đình thật',
+    summary:
+      'Phù hợp khi bạn đang cần làm rõ tài sản chung riêng, di chúc, di sản thừa kế, kê khai di sản hoặc những mâu thuẫn về quyền sở hữu tài sản trong gia đình.',
+    intro:
+      'Tài sản và thừa kế là mảng rất dễ kéo theo cảm xúc, hiểu lầm và áp lực từ nhiều phía. Một bước rà lại hồ sơ và mốc thời gian sớm thường giúp tránh những quyết định vội hoặc những xung đột leo thang không cần thiết.',
+    commonSituations: [
+      'Có di chúc nhưng các bên hiểu khác nhau về nội dung hoặc hiệu lực.',
+      'Không có di chúc và đang phát sinh mâu thuẫn về người thừa kế, phần di sản hoặc nghĩa vụ liên quan.',
+      'Cần xác định tài sản là chung hay riêng trong hôn nhân hoặc trong phạm vi gia đình.',
+      'Tranh chấp nhà đất, quyền sở hữu hoặc kê khai di sản chưa biết nên bắt đầu từ giấy tờ nào.',
+    ],
+    supportScope: [
+      'Giúp sắp lại bức tranh tài sản, người liên quan và mốc thời gian quan trọng.',
+      'Rà soát giấy tờ về quyền sở hữu, di chúc, quan hệ nhân thân và hồ sơ phát sinh liên quan.',
+      'Đề xuất hướng làm việc phù hợp: trao đổi nội bộ, thương lượng, văn bản hay chuẩn bị cho tranh chấp.',
+      'Làm rõ mục tiêu thực tế của khách hàng để tránh đi quá xa khi hồ sơ chưa đủ chín.',
+    ],
+    strengths: [
+      'An Luật hiểu rằng tranh chấp tài sản và thừa kế hiếm khi chỉ là câu chuyện giấy tờ đơn thuần.',
+      'Tư vấn theo hướng rõ ràng, kiên nhẫn và không đẩy khách hàng vào cảm giác phải quyết định quá nhanh.',
+      'Kết hợp giữa phân tích hồ sơ với việc nhìn nhận tác động thật lên quan hệ gia đình.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tài sản & thừa kế',
+    checklistItems: [
+      'Giấy tờ về tài sản: sổ đỏ, hợp đồng mua bán, giấy đăng ký, giấy tờ góp vốn hoặc tài liệu sở hữu khác.',
+      'Di chúc, văn bản thỏa thuận, giấy tờ nhân thân, giấy khai sinh, đăng ký kết hôn nếu có liên quan.',
+      'Danh sách người liên quan và mối quan hệ của họ với tài sản hoặc di sản.',
+      'Các trao đổi trước đó giữa các bên: tin nhắn, email, biên bản họp, xác nhận chia tài sản.',
+      'Những mốc thời gian chính: thời điểm hình thành tài sản, mất, mở thừa kế hoặc phát sinh tranh chấp.',
+    ],
+    faq: [
+      {
+        question: 'Không có di chúc thì có còn hướng xử lý rõ ràng không?',
+        answer:
+          'Có. Nhiều hồ sơ thừa kế vẫn có thể được phân tích và định hướng tốt ngay cả khi không có di chúc, miễn là thông tin về người liên quan và tài sản được làm rõ dần.',
+      },
+      {
+        question: 'Tôi chỉ mới nghi ngờ có rủi ro về tài sản, chưa tranh chấp hẳn thì có nên liên hệ không?',
+        answer:
+          'Có. Với tài sản và thừa kế, chuẩn bị từ sớm thường giúp tránh được những bước đi khiến hồ sơ sau này khó hơn.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tài sản / thừa kế',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Cá nhân',
+    secondaryCtaHref: '/ca-nhan',
+  },
+  {
+    href: '/ca-nhan/tranh-chap-dan-su',
+    navLabel: 'Tranh chấp dân sự',
+    eyebrow: 'Cá nhân & gia đình',
+    title: 'Tranh chấp dân sự không chỉ cần biết ai đúng, mà cần biết bước nào đáng làm trước',
+    summary:
+      'Trang này dành cho những tranh chấp dân sự về nghĩa vụ, tài sản, nhà đất hoặc quyền lợi cá nhân khi bạn cần đánh giá hồ sơ, mức độ rủi ro và đường đi phù hợp hơn.',
+    intro:
+      'Trong nhiều tranh chấp dân sự, khách hàng thường bị kéo giữa hai thái cực: hoặc chần chừ quá lâu, hoặc muốn làm thật mạnh ngay lập tức. Điều hữu ích hơn là nhìn lại hồ sơ để biết bước nào nên đi trước, bước nào chưa cần vội.',
+    commonSituations: [
+      'Mâu thuẫn về quyền sở hữu, sử dụng tài sản hoặc nghĩa vụ phát sinh giữa các cá nhân.',
+      'Tranh chấp liên quan nhà đất, giấy tay, giao dịch dân sự hoặc thỏa thuận không được ghi nhận rõ.',
+      'Một bên không thực hiện cam kết nhưng hồ sơ đang rời rạc, thiếu mốc thời gian hoặc thiếu chứng cứ.',
+      'Bạn cần biết có nên thương lượng, gửi yêu cầu bằng văn bản hay chuẩn bị hồ sơ tranh tụng sâu hơn.',
+    ],
+    supportScope: [
+      'Đọc lại hồ sơ và đặt chúng vào trình tự dễ hiểu để thấy điểm mạnh, điểm yếu.',
+      'Xác định tài liệu nào đang có giá trị nhất và tài liệu nào còn thiếu.',
+      'Đề xuất nhịp xử lý phù hợp giữa thương lượng, văn bản, làm việc trực tiếp hoặc bước pháp lý sâu hơn.',
+      'Giúp bạn hiểu tác động về thời gian, chi phí và kỳ vọng thực tế của từng hướng đi.',
+    ],
+    strengths: [
+      'An Luật ưu tiên làm rõ vấn đề thật trước khi khuyến nghị động tác pháp lý cụ thể.',
+      'Giữ cách tư vấn bình tĩnh, không đẩy khách hàng vào tâm thế phải “đánh lớn” ngay.',
+      'Kết hợp góc nhìn hồ sơ, tâm lý vụ việc và chiến lược đi tiếp.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tranh chấp dân sự',
+    checklistItems: [
+      'Giấy tờ về tài sản, thỏa thuận, biên nhận, hợp đồng hoặc giấy viết tay nếu có.',
+      'Các trao đổi giữa các bên: tin nhắn, email, ghi âm hợp lệ, biên bản làm việc.',
+      'Tóm tắt mâu thuẫn chính: chuyện gì xảy ra, từ khi nào, điều bạn cho rằng bị vi phạm là gì.',
+      'Thông tin bên còn lại và cách liên hệ hiện tại nếu có.',
+      'Những bước đã thử trước đó: thương lượng, nhờ người hòa giải, gửi yêu cầu, làm việc với cơ quan nào đó.',
+    ],
+    faq: [
+      {
+        question: 'Tranh chấp dân sự có nhất thiết phải ra tòa không?',
+        answer:
+          'Không phải lúc nào cũng vậy. Có nhiều vụ việc cần đánh giá lại hồ sơ và cơ hội thương lượng trước khi cân nhắc bước tố tụng.',
+      },
+      {
+        question: 'Nếu tôi cảm thấy mình đang yếu hồ sơ thì có nên trao đổi không?',
+        answer:
+          'Nên. Biết hồ sơ yếu ở đâu từ sớm vẫn tốt hơn nhiều so với việc tự suy đoán rồi lỡ những bước có thể bổ sung hoặc giữ chứng cứ.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tranh chấp dân sự',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Cá nhân',
+    secondaryCtaHref: '/ca-nhan',
+  },
+  {
+    href: '/ca-nhan/thu-hoi-no-ca-nhan',
+    navLabel: 'Thu hồi nợ cá nhân',
+    eyebrow: 'Cá nhân & gia đình',
+    title: 'Thu hồi nợ cá nhân cần đủ tỉnh táo để đòi đúng cách và giữ đúng chứng cứ',
+    summary:
+      'Phù hợp khi bạn đang cần đòi lại tiền cho vay, tiền đặt cọc, tiền hàng hoặc các khoản phải trả giữa cá nhân với cá nhân mà chưa biết nên bắt đầu ra sao.',
+    intro:
+      'Công nợ giữa cá nhân thường đi kèm với sự quen biết, nể nang hoặc áp lực phải xử lý nhanh. Chính vì vậy, rất nhiều người bỏ lỡ thời điểm quan trọng để giữ chứng cứ hoặc chọn cách đòi nợ khiến mình rơi vào thế bất lợi hơn.',
+    commonSituations: [
+      'Cho vay tiền bằng giấy viết tay, chuyển khoản hoặc thỏa thuận miệng rồi bên kia không trả.',
+      'Phát sinh công nợ do mua bán, đặt cọc, cộng tác hoặc nhờ giữ tiền giữa cá nhân với nhau.',
+      'Đã nhiều lần nhắc nợ nhưng chỉ nhận được lời hứa kéo dài.',
+      'Muốn biết nên thương lượng tiếp, gửi văn bản hay chuẩn bị hồ sơ sâu hơn.',
+    ],
+    supportScope: [
+      'Rà soát lại chứng cứ nợ và khả năng chứng minh nghĩa vụ thanh toán.',
+      'Đề xuất cách giao tiếp, thương lượng và tạo áp lực đúng luật.',
+      'Giúp bạn hiểu nên chuẩn bị gì nếu vụ việc phải đi xa hơn.',
+      'Giữ định hướng thực tế về thời gian, chi phí và khả năng thu hồi.',
+    ],
+    strengths: [
+      'An Luật có kinh nghiệm lâu năm với các bài toán công nợ và thu hồi nợ đúng luật.',
+      'Không cổ vũ các cách làm cảm tính hoặc tạo thêm rủi ro cho chính khách hàng.',
+      'Giúp khách hàng cân bằng giữa mục tiêu thu tiền nhanh và việc giữ hồ sơ đủ chắc.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho thu hồi nợ cá nhân',
+    checklistItems: [
+      'Chứng từ thể hiện khoản nợ: giấy vay, chuyển khoản, tin nhắn xác nhận, biên nhận hoặc thỏa thuận.',
+      'Thông tin người nợ: họ tên, số điện thoại, địa chỉ, mối quan hệ, tài khoản liên quan nếu có.',
+      'Các trao đổi đòi nợ trước đó và phản hồi của bên còn nợ.',
+      'Số tiền, thời hạn đã hứa trả và số lần trễ hạn.',
+      'Điều bạn ưu tiên: thu nhanh, giữ quan hệ hay chuẩn bị đi tiếp bằng hướng pháp lý mạnh hơn.',
+    ],
+    faq: [
+      {
+        question: 'Chỉ có chuyển khoản và tin nhắn thì có đủ để bắt đầu trao đổi không?',
+        answer:
+          'Có thể có. Điều quan trọng là sắp lại toàn bộ chứng cứ đang có để đánh giá mức độ rõ ràng của nghĩa vụ và những gì còn thiếu.',
+      },
+      {
+        question: 'Tôi sợ làm căng quá sẽ mất cơ hội lấy lại tiền thì sao?',
+        answer:
+          'Đó là lo lắng rất thực tế. Vì vậy việc chọn nhịp thương lượng và chuẩn bị hồ sơ song song thường quan trọng không kém việc “đòi mạnh” hay không.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về công nợ cá nhân',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Cá nhân',
+    secondaryCtaHref: '/ca-nhan',
   },
   {
     href: '/lao-dong-nhan-su',
@@ -669,6 +884,215 @@ export const practicePages: PracticePageContent[] = [
     primaryCtaHref: '/lien-he',
     secondaryCtaLabel: 'Quay lại Tranh tụng & Thu hồi nợ',
     secondaryCtaHref: '/tranh-tung-thu-hoi-no',
+  },
+  {
+    href: '/dao-tao',
+    navLabel: 'Đào tạo',
+    eyebrow: 'Đào tạo & chia sẻ chuyên môn',
+    title: 'Đào tạo pháp lý để đội ngũ không chuyên luật vẫn làm việc chắc tay hơn',
+    summary:
+      'Trang này dành cho doanh nghiệp, hiệp hội, khu công nghiệp và đội ngũ vận hành đang cần chương trình đào tạo pháp lý thực tế, dễ áp dụng và bám sát tình huống công việc.',
+    intro:
+      'Đào tạo là một phần quan trọng trong cách An Luật đồng hành với tổ chức. Mục tiêu không phải để người học nhớ thật nhiều điều luật, mà để họ nhận ra rủi ro sớm hơn và xử lý công việc thường ngày chắc hơn.',
+    commonSituations: [
+      'Doanh nghiệp muốn đào tạo nội bộ cho HR, quản lý, sales hoặc vận hành về các rủi ro pháp lý thường gặp.',
+      'Cần workshop ngắn theo chuyên đề như hợp đồng, lao động, kỷ luật, công nợ hoặc quy trình nội bộ.',
+      'Hiệp hội, khu công nghiệp hoặc đơn vị đào tạo cần mời luật sư tham gia chia sẻ cho hội viên.',
+      'Doanh nghiệp muốn kết hợp đào tạo với rà soát pháp lý để nhìn rõ các điểm cần sửa ngay sau chương trình.',
+    ],
+    supportScope: [
+      'Thiết kế nội dung đào tạo theo đối tượng, cấp quản lý và bối cảnh vận hành thực tế.',
+      'Chia chuyên đề thành các buổi ngắn, workshop hoặc chương trình theo chuỗi tùy nhu cầu.',
+      'Kết hợp ví dụ thực tế, hồ sơ mẫu và các lỗi thường gặp để người học áp dụng được ngay.',
+      'Đề xuất bước tiếp theo sau đào tạo nếu doanh nghiệp cần rà soát hoặc chuẩn hóa thêm.',
+    ],
+    strengths: [
+      'An Luật có kinh nghiệm đào tạo và phối hợp cùng doanh nghiệp, hiệp hội và khu công nghiệp trong nhiều năm.',
+      'Ngôn ngữ đào tạo hướng tới người làm việc thực tế, không biến buổi học thành một bài giảng nặng thuật ngữ.',
+      'Có thể nối đào tạo với tư vấn hoặc rà soát nội bộ khi tổ chức cần đi sâu hơn.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho chương trình đào tạo',
+    checklistItems: [
+      'Đối tượng học: quản lý, HR, sales, vận hành, founder hay đội ngũ hỗn hợp.',
+      'Nhóm vấn đề đang gặp nhiều nhất trong doanh nghiệp hoặc tổ chức.',
+      'Mục tiêu sau chương trình: nhận diện rủi ro, chuẩn hóa quy trình hay xử lý một vấn đề cụ thể.',
+      'Quy mô, hình thức và thời lượng mong muốn: nội bộ, workshop, online, offline, chuỗi buổi.',
+      'Tài liệu, quy chế, hợp đồng mẫu hoặc case nội bộ có thể dùng làm ví dụ nếu phù hợp.',
+    ],
+    faq: [
+      {
+        question: 'An Luật có chỉ đào tạo cho doanh nghiệp lớn không?',
+        answer:
+          'Không. Quy mô không phải yếu tố quyết định. Điều quan trọng là chương trình có được thiết kế đúng với tình huống và đội ngũ thực tế hay không.',
+      },
+      {
+        question: 'Có thể kết hợp đào tạo với rà soát nội bộ không?',
+        answer:
+          'Có. Trong nhiều trường hợp, đào tạo là điểm khởi đầu rất tốt để doanh nghiệp nhận ra phần nào cần rà soát hoặc sửa ngay sau đó.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về chương trình đào tạo',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Xem về An Luật',
+    secondaryCtaHref: '/ve-an-luat',
+    relatedLinks: [
+      { label: 'Đào tạo pháp lý nội bộ', href: '/dao-tao/phap-ly-noi-bo' },
+      { label: 'Workshop / hội thảo', href: '/dao-tao/workshop-hoi-thao' },
+      { label: 'Chương trình cho hiệp hội / khu công nghiệp', href: '/dao-tao/hiep-hoi-khu-cong-nghiep' },
+    ],
+  },
+  {
+    href: '/dao-tao/phap-ly-noi-bo',
+    navLabel: 'Đào tạo pháp lý nội bộ',
+    eyebrow: 'Đào tạo & chia sẻ chuyên môn',
+    title: 'Đào tạo pháp lý nội bộ để đội ngũ làm việc chắc hơn ngay trong công việc thường ngày',
+    summary:
+      'Phù hợp khi doanh nghiệp muốn xây chương trình đào tạo riêng cho HR, quản lý, sales, vận hành hoặc các bộ phận thường xuyên ra quyết định có rủi ro pháp lý.',
+    intro:
+      'Không phải doanh nghiệp nào cũng cần một chương trình dài. Nhiều khi chỉ cần đúng chủ đề, đúng ví dụ và đúng người học, hiệu quả thực tế đã khác rất nhiều so với những buổi phổ biến kiến thức chung chung.',
+    commonSituations: [
+      'Bộ phận HR cần hiểu chắc hơn về hợp đồng lao động, kỷ luật, nghỉ việc và hồ sơ nhân sự.',
+      'Bộ phận kinh doanh cần nhận diện sớm các điều khoản hợp đồng hoặc cam kết dễ gây rủi ro.',
+      'Quản lý cấp trung cần biết những giới hạn pháp lý khi ra quyết định với nhân sự hoặc đối tác.',
+      'Doanh nghiệp muốn giảm việc “đến khi có sự cố mới hỏi luật sư”.',
+    ],
+    supportScope: [
+      'Khảo sát nhu cầu đào tạo theo phòng ban, cấp bậc hoặc tình huống cụ thể.',
+      'Thiết kế chương trình theo case thực tế, hồ sơ mẫu và lỗi phổ biến trong doanh nghiệp.',
+      'Tổ chức theo buổi độc lập hoặc chuỗi buổi tùy mức độ chuyên sâu.',
+      'Gợi ý bước theo sau đào tạo như rà soát hợp đồng, quy trình hoặc quy chế liên quan.',
+    ],
+    strengths: [
+      'An Luật quen với các bài toán mà đội ngũ không chuyên luật gặp hàng ngày trong vận hành.',
+      'Chương trình đào tạo được thiết kế để người học có thể áp dụng ngay, không chỉ “nghe cho biết”.',
+      'Có thể điều chỉnh ngôn ngữ và ví dụ cho từng nhóm người học khác nhau.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho đào tạo pháp lý nội bộ',
+    checklistItems: [
+      'Danh sách nhóm người học và chức năng công việc của họ.',
+      '3-5 tình huống hoặc lỗi nội bộ đang lặp lại nhiều nhất.',
+      'Mẫu hợp đồng, mẫu biểu, quy trình hoặc quy chế hiện đang dùng nếu có thể chia sẻ.',
+      'Hình thức mong muốn: đào tạo nền tảng, giải case, Q&A hoặc workshop xử lý tình huống.',
+      'Kỳ vọng sau buổi học: nhận diện rủi ro, chuẩn hóa thao tác hay sửa một quy trình cụ thể.',
+    ],
+    faq: [
+      {
+        question: 'Buổi đào tạo có thể chỉ tập trung vào một chủ đề nhỏ không?',
+        answer:
+          'Có. Nhiều chương trình hiệu quả nhất lại là những buổi hẹp, tập trung vào đúng vấn đề doanh nghiệp đang vướng.',
+      },
+      {
+        question: 'An Luật có thể đào tạo dựa trên hồ sơ và tài liệu nội bộ của doanh nghiệp không?',
+        answer:
+          'Có thể, nếu doanh nghiệp đồng ý chia sẻ trong phạm vi phù hợp để chương trình sát thực tế hơn.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về đào tạo nội bộ',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Đào tạo',
+    secondaryCtaHref: '/dao-tao',
+  },
+  {
+    href: '/dao-tao/workshop-hoi-thao',
+    navLabel: 'Workshop / hội thảo',
+    eyebrow: 'Đào tạo & chia sẻ chuyên môn',
+    title: 'Workshop và hội thảo pháp lý cần đủ thực tế để người nghe mang được điều gì đó về làm ngay',
+    summary:
+      'Trang này dành cho doanh nghiệp, cộng đồng nghề nghiệp hoặc đối tác đang cần một buổi workshop/hội thảo pháp lý với cấu trúc rõ, ngôn ngữ dễ hiểu và nội dung bám sát thực tế.',
+    intro:
+      'Một buổi chia sẻ tốt không chỉ nằm ở việc truyền đạt kiến thức, mà còn ở việc giúp người nghe nhìn thấy rủi ro ngay trong công việc quen thuộc của họ. Đây là hướng tiếp cận An Luật theo đuổi trong các chương trình chuyên đề.',
+    commonSituations: [
+      'Cần một buổi chia sẻ ngắn về hợp đồng, lao động, công nợ, tuân thủ hoặc quản trị nội bộ.',
+      'Muốn tổ chức workshop thực hành có tình huống, câu hỏi và góc nhìn từ hồ sơ thực tế.',
+      'Đối tác cần diễn giả có kinh nghiệm vừa tư vấn vừa đứng lớp cho cộng đồng doanh nghiệp.',
+      'Tổ chức đang tìm một format hội thảo không quá học thuật nhưng vẫn chắc về pháp lý.',
+    ],
+    supportScope: [
+      'Đề xuất format phù hợp: keynote, workshop tình huống, bàn tròn hỏi đáp hoặc chuỗi buổi ngắn.',
+      'Thiết kế nội dung theo chủ đề và đối tượng người nghe thực tế.',
+      'Chuẩn bị khung câu hỏi, điểm rủi ro thường gặp và ví dụ áp dụng ngay sau buổi học.',
+      'Phối hợp với đối tác về mục tiêu truyền thông, nội dung và mức độ chuyên sâu.',
+    ],
+    strengths: [
+      'An Luật có trải nghiệm đào tạo cho nhiều nhóm người nghe khác nhau, từ nội bộ doanh nghiệp đến cộng đồng nghề nghiệp.',
+      'Nội dung luôn được viết lại theo ngôn ngữ gần người nghe thay vì bê nguyên tài liệu học thuật lên sân khấu.',
+      'Giữ cân bằng giữa tính chuyên môn, tính ứng dụng và nhịp tương tác trong buổi chia sẻ.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho workshop / hội thảo',
+    checklistItems: [
+      'Đối tượng tham dự và số lượng dự kiến.',
+      'Chủ đề ưu tiên và bối cảnh tổ chức chương trình.',
+      'Mức độ mong muốn: định hướng cơ bản, chuyên đề chuyên sâu hay giải case thực tế.',
+      'Hình thức tổ chức: online, offline, nội bộ, mở rộng cho đối tác hay hội viên.',
+      'Các yêu cầu phối hợp truyền thông, tài liệu hoặc phần hỏi đáp nếu có.',
+    ],
+    faq: [
+      {
+        question: 'Workshop có thể thiết kế riêng cho một ngành cụ thể không?',
+        answer:
+          'Có. Đây thường là cách hiệu quả hơn vì ví dụ và rủi ro sẽ gần với người tham dự hơn nhiều.',
+      },
+      {
+        question: 'Chương trình có nhất thiết phải dài không?',
+        answer:
+          'Không. Nhiều buổi 60-120 phút vẫn tạo giá trị rất tốt nếu mục tiêu và chủ đề được chốt rõ từ đầu.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về workshop / hội thảo',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Đào tạo',
+    secondaryCtaHref: '/dao-tao',
+  },
+  {
+    href: '/dao-tao/hiep-hoi-khu-cong-nghiep',
+    navLabel: 'Hiệp hội / khu công nghiệp',
+    eyebrow: 'Đào tạo & chia sẻ chuyên môn',
+    title: 'Chương trình cho hiệp hội và khu công nghiệp cần vừa chắc chuyên môn vừa nói đúng ngôn ngữ doanh nghiệp',
+    summary:
+      'Phù hợp khi hiệp hội doanh nghiệp, ban quản lý khu công nghiệp hoặc đơn vị đồng hành cần chương trình chia sẻ pháp lý cho hội viên với nội dung thực tế và cấu trúc mạch lạc.',
+    intro:
+      'Các chương trình cho cộng đồng doanh nghiệp cần một cách tiếp cận khác: phải đủ rộng để nhiều người cùng theo được, nhưng vẫn đủ sát thực tế để người nghe thấy nó liên quan trực tiếp đến mình. Đây là dạng chương trình An Luật đã có kinh nghiệm tham gia trong nhiều năm.',
+    commonSituations: [
+      'Hiệp hội cần chương trình cập nhật rủi ro pháp lý cho hội viên theo chủ đề nóng.',
+      'Khu công nghiệp hoặc cộng đồng doanh nghiệp muốn tổ chức chia sẻ về lao động, hợp đồng, công nợ hoặc tuân thủ.',
+      'Đơn vị tổ chức cần diễn giả có thể nói với nhóm doanh nghiệp nhiều quy mô và ngành nghề khác nhau.',
+      'Cần một đối tác vừa hiểu pháp lý, vừa hiểu cách người đi làm thật sự tiếp nhận thông tin.',
+    ],
+    supportScope: [
+      'Cùng đơn vị tổ chức xác định mục tiêu, nhóm người nghe và chủ đề sát nhu cầu nhất.',
+      'Thiết kế chương trình theo hướng cập nhật, thực tiễn và dễ chuyển thành hành động.',
+      'Linh hoạt giữa hình thức chia sẻ một buổi, chuỗi chuyên đề hoặc kết hợp hỏi đáp sâu.',
+      'Hỗ trợ định hình tài liệu và thông điệp chính của chương trình nếu cần.',
+    ],
+    strengths: [
+      'An Luật đã có kinh nghiệm phối hợp cùng hiệp hội, khu công nghiệp và các đơn vị đào tạo trong hoạt động chuyên môn.',
+      'Hiểu cách nói chuyện với doanh nghiệp vừa và nhỏ, nhóm quản lý và người làm vận hành.',
+      'Không biến chương trình cộng đồng thành bài giảng nặng thuật ngữ hoặc quá xa thực tế.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho chương trình hiệp hội / khu công nghiệp',
+    checklistItems: [
+      'Đối tượng hội viên hoặc doanh nghiệp tham dự: ngành nghề, quy mô, vai trò chính.',
+      'Nhóm chủ đề cần ưu tiên: lao động, hợp đồng, công nợ, quản trị nội bộ, tuân thủ.',
+      'Mục tiêu chương trình: cập nhật, cảnh báo rủi ro, hỏi đáp hay tạo chuỗi đào tạo.',
+      'Thời lượng, hình thức và khung phối hợp tổ chức mong muốn.',
+      'Các nội dung đã tổ chức trước đó để tránh trùng lặp nếu có.',
+    ],
+    faq: [
+      {
+        question: 'Chương trình cho hiệp hội có thể điều chỉnh theo nhóm hội viên không?',
+        answer:
+          'Có. Nếu đặc thù hội viên khá rõ, chương trình càng được điều chỉnh tốt thì mức độ hữu ích càng cao.',
+      },
+      {
+        question: 'An Luật có thể tham gia theo dạng chuỗi chương trình không?',
+        answer:
+          'Có thể, nếu mục tiêu của đơn vị tổ chức là xây một lộ trình chia sẻ theo nhiều chủ đề thay vì chỉ một buổi đơn lẻ.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về chương trình cộng đồng',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại mục Đào tạo',
+    secondaryCtaHref: '/dao-tao',
   },
   {
     href: '/tranh-tung-thu-hoi-no',

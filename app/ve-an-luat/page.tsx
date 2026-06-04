@@ -46,6 +46,9 @@ export default function AboutPage() {
               <Link href="/1-gio-gap-nhu" className="text-sm font-bold text-brand-primary">
                 Tìm hiểu 1 GIỜ GẶP NHƯ
               </Link>
+              <Link href="/dao-tao" className="text-sm font-bold text-brand-primary">
+                Xem mảng đào tạo
+              </Link>
             </div>
           </div>
 
