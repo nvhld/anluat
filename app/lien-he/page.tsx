@@ -31,7 +31,7 @@ export default function ContactPage() {
                 Bắt đầu bằng một cuộc gọi đủ ngắn, nhưng đúng trọng tâm.
               </h1>
               <p className="max-w-3xl text-lg leading-relaxed text-text-secondary">
-                Website đang ưu tiên tiếp nhận qua hotline để thư ký ghi nhận nhu cầu ban đầu, hướng dẫn tài liệu cần chuẩn bị và xác nhận cách làm việc phù hợp cho từng vụ việc.
+                An Luật ưu tiên tiếp nhận qua hotline để thư ký ghi nhận nhóm vấn đề, mức độ khẩn cấp và hướng dẫn phần chuẩn bị cần thiết trước khi đi sâu hơn.
               </p>
               <div className="grid gap-3 sm:max-w-xl">
                 <a
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </a>
               </div>
               <p className="text-sm leading-relaxed text-text-muted">
-                Ở bước đầu, bạn chỉ cần chia sẻ phần thông tin tối thiểu để An Luật hiểu nhóm vấn đề và mức độ khẩn cấp. Quan hệ luật sư - khách hàng chỉ hình thành sau khi có xác nhận tiếp nhận phù hợp.
+                Ở bước đầu, bạn chỉ cần chia sẻ phần thông tin tối thiểu để An Luật hiểu nhu cầu liên hệ. Quan hệ luật sư - khách hàng chỉ hình thành sau khi có xác nhận tiếp nhận phù hợp.
               </p>
             </div>
 

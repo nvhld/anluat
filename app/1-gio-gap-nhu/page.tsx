@@ -60,7 +60,7 @@ export default function OneHourWithNhuPage() {
                 </a>
               </div>
               <p className="text-sm leading-relaxed text-text-muted">
-                Phí tư vấn được xác nhận sau khi An Luật xem sơ bộ nội dung vụ việc. Website chưa hiển thị giá công khai và chưa xử lý thanh toán online.
+                Phí tư vấn được trao đổi sau khi An Luật xem sơ bộ bối cảnh vụ việc. Website không hiển thị giá công khai và chưa xử lý thanh toán online.
               </p>
             </div>
 

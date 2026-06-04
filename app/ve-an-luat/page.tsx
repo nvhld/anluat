@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-gold">Về chúng tôi</span>
             <h1 className="font-heading text-5xl font-black leading-tight text-brand-primary md:text-6xl">An Luật</h1>
             <p className="text-lg leading-relaxed text-text-secondary">
-              {site.legalName} được thành lập năm 2006 bởi Luật sư Đinh Thị Quỳnh Như. An Luật cung cấp dịch vụ pháp lý cho cá nhân và doanh nghiệp, với định hướng tiếp nhận cởi mở, tư vấn rõ ràng và xử lý tận tâm.
+              {site.legalName} được thành lập năm 2006 bởi Luật sư Đinh Thị Quỳnh Như. An Luật đồng hành cùng cá nhân và doanh nghiệp với cách tiếp nhận cởi mở, tư vấn rõ ràng và xử lý tận tâm.
             </p>
             <p className="leading-relaxed text-text-secondary">
               Từ năm 2020, An Luật mở rộng hoạt động với chi nhánh tại Bà Rịa - Vũng Tàu, đồng thời duy trì hoạt động tại TP. Hồ Chí Minh.

@@ -103,7 +103,7 @@ export default function HomePage() {
             </div>
 
             <p className="max-w-2xl text-sm leading-relaxed text-text-muted">
-              Website hiện không thu thập nội dung vụ việc trực tuyến. Khi liên hệ lần đầu, bạn chỉ cần chia sẻ thông tin tối thiểu cần thiết để được hướng dẫn bước tiếp theo.
+              An Luật hiện ưu tiên tiếp nhận qua hotline. Ở bước đầu, bạn chỉ cần chia sẻ phần thông tin tối thiểu để được hướng dẫn cách bắt đầu phù hợp.
             </p>
           </div>
 

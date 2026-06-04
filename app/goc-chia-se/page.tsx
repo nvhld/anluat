@@ -29,7 +29,7 @@ export default function InsightsHubPage() {
               Góc nhìn nghề nghiệp và những chủ đề An Luật đang ưu tiên nói rõ.
             </h1>
             <p className="mt-6 max-w-3xl leading-relaxed text-text-secondary">
-              Thư viện nội dung đầy đủ vẫn đang được biên tập lại. Trong giai đoạn này, website ưu tiên đưa lên những chủ đề giúp người đọc hiểu đúng vấn đề, đúng phạm vi dịch vụ và đúng cách bắt đầu liên hệ với An Luật.
+              Đây là nơi An Luật gom lại những chủ đề nên được nói cho rõ trước: phạm vi dịch vụ, cách nhìn hồ sơ, các điểm rủi ro thường bị bỏ sót và cách bắt đầu một cuộc trao đổi đúng trọng tâm.
             </p>
           </section>
 
