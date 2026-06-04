@@ -524,8 +524,11 @@ export const practicePages: PracticePageContent[] = [
     secondaryCtaLabel: 'Xem dịch vụ rà soát pháp lý nội bộ',
     secondaryCtaHref: '/doanh-nghiep/ra-soat-phap-ly-noi-bo',
     relatedLinks: [
+      { label: 'Góp vốn / cổ đông', href: '/doanh-nghiep/gop-von-co-dong' },
+      { label: 'Quy chế nội bộ', href: '/doanh-nghiep/quy-che-noi-bo' },
       { label: 'Rà soát pháp lý nội bộ', href: '/doanh-nghiep/ra-soat-phap-ly-noi-bo' },
-      { label: 'Tranh tụng & Thu hồi nợ', href: '/tranh-tung-thu-hoi-no' },
+      { label: 'Sở hữu trí tuệ', href: '/doanh-nghiep/so-huu-tri-tue' },
+      { label: 'M&A / đầu tư', href: '/doanh-nghiep/ma-dau-tu' },
     ],
   },
   {
@@ -779,6 +782,210 @@ export const practicePages: PracticePageContent[] = [
       },
     ],
     primaryCtaLabel: 'Liên hệ về hợp đồng',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/doanh-nghiep/gop-von-co-dong',
+    navLabel: 'Góp vốn / cổ đông',
+    eyebrow: 'Doanh nghiệp',
+    title: 'Góp vốn và cổ đông chỉ thực sự an toàn khi quyền, vai trò và đường lui đều rõ',
+    summary:
+      'Trang này dành cho doanh nghiệp hoặc founder đang cần làm rõ điều lệ, góp vốn, quyền cổ đông/thành viên, người đại diện và các mâu thuẫn nội bộ dễ leo thang nếu để kéo dài.',
+    intro:
+      'Nhiều vấn đề cổ đông không nổ ra ngay từ đầu, mà tích tụ dần qua những thỏa thuận chưa chặt, vai trò chưa rõ và kỳ vọng không còn giống nhau. Một bước rà lại điều lệ, hồ sơ góp vốn và quyền quyết định đúng lúc có thể giúp doanh nghiệp giữ được cả cấu trúc lẫn nhịp vận hành.',
+    commonSituations: [
+      'Founder hoặc thành viên góp vốn đang có cách hiểu khác nhau về quyền, nghĩa vụ hoặc tỷ lệ sở hữu.',
+      'Điều lệ, thỏa thuận cổ đông hoặc hồ sơ góp vốn không còn phản ánh đúng tình trạng vận hành hiện tại.',
+      'Phát sinh mâu thuẫn về người đại diện, quyền ký, quyền quản lý hoặc cơ chế thông qua quyết định.',
+      'Doanh nghiệp muốn xử lý từ sớm trước khi mâu thuẫn chuyển thành tranh chấp cổ đông thật sự.',
+    ],
+    supportScope: [
+      'Rà soát điều lệ, hồ sơ góp vốn, cơ cấu sở hữu và các thỏa thuận giữa các bên.',
+      'Làm rõ những điểm đang mâu thuẫn về quyền quyết định, quyền quản lý, chuyển nhượng hoặc trách nhiệm.',
+      'Đề xuất hướng sửa đổi, thương lượng nội bộ hoặc chuẩn bị hồ sơ nếu tranh chấp có nguy cơ bùng lên.',
+      'Giúp doanh nghiệp nhìn vấn đề dưới cả góc độ pháp lý lẫn ổn định vận hành.',
+    ],
+    strengths: [
+      'An Luật không xem câu chuyện cổ đông chỉ là bài toán giấy tờ, mà là bài toán quyền lực, trách nhiệm và đường dài của doanh nghiệp.',
+      'Có kinh nghiệm tư vấn cho doanh nghiệp đang vận hành nên hiểu tác động thực tế của mâu thuẫn nội bộ.',
+      'Ưu tiên làm rõ và tháo nút thắt sớm trước khi doanh nghiệp bị kéo vào tranh chấp kéo dài.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho góp vốn / cổ đông',
+    checklistItems: [
+      'Điều lệ công ty, đăng ký doanh nghiệp và các thay đổi gần nhất nếu có.',
+      'Hồ sơ góp vốn, chuyển nhượng, thỏa thuận cổ đông/thành viên hoặc cam kết nội bộ liên quan.',
+      'Thông tin về cơ cấu sở hữu hiện tại và cách phân chia vai trò điều hành thực tế.',
+      'Biên bản họp, nghị quyết, email, tin nhắn hoặc các trao đổi thể hiện mâu thuẫn.',
+      'Mục tiêu ưu tiên: làm rõ quyền, sửa cấu trúc, thương lượng tiếp hay chuẩn bị cho tình huống xấu hơn.',
+    ],
+    faq: [
+      {
+        question: 'Nếu mâu thuẫn mới ở mức âm ỉ, chưa tranh chấp công khai thì có nên rà soát không?',
+        answer:
+          'Có. Với câu chuyện cổ đông, xử lý sớm khi các bên còn nói chuyện được thường hiệu quả hơn rất nhiều so với lúc mọi thứ đã đổ vỡ.',
+      },
+      {
+        question: 'Doanh nghiệp chưa có thỏa thuận cổ đông riêng thì có cách nào bổ sung không?',
+        answer:
+          'Có thể. Trước hết cần nhìn lại điều lệ, tình trạng vận hành và mối quan hệ giữa các bên để xác định tài liệu nào nên được thiết kế thêm.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về góp vốn / cổ đông',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/doanh-nghiep/quy-che-noi-bo',
+    navLabel: 'Quy chế nội bộ',
+    eyebrow: 'Doanh nghiệp',
+    title: 'Quy chế nội bộ không chỉ để “cho có”, mà để doanh nghiệp vận hành trên một nền rõ ràng',
+    summary:
+      'Phù hợp khi doanh nghiệp cần xây dựng hoặc chỉnh lại quy chế nội bộ, cơ chế phê duyệt, bảo mật, ủy quyền, phối hợp phòng ban hoặc các nguyên tắc tuân thủ cơ bản.',
+    intro:
+      'Khi doanh nghiệp lớn lên, những thỏa thuận miệng và cách làm ngầm hiểu thường không còn đủ. Quy chế nội bộ tốt không làm bộ máy nặng hơn; ngược lại, nó giúp mọi người biết mình được làm gì, phải chịu trách nhiệm đến đâu và tránh lặp lại những va chạm tốn kém.',
+    commonSituations: [
+      'Doanh nghiệp tăng quy mô nhưng chưa có hoặc chưa cập nhật quy chế nội bộ cho phù hợp.',
+      'Các phòng ban đang xử lý công việc theo thói quen khác nhau, thiếu chuẩn chung.',
+      'Cần làm rõ cơ chế phê duyệt, ký kết, ủy quyền, bảo mật dữ liệu hoặc phối hợp nội bộ.',
+      'Đã phát sinh sai sót hoặc mâu thuẫn và doanh nghiệp muốn bịt lại lỗ hổng vận hành từ gốc.',
+    ],
+    supportScope: [
+      'Rà soát quy chế, nội quy, quy trình hiện có và mức độ còn phù hợp với vận hành thực tế.',
+      'Hỗ trợ xây dựng hoặc điều chỉnh quy chế theo đúng loại hình, quy mô và nhu cầu quản trị.',
+      'Làm rõ mối liên hệ giữa quy chế nội bộ với lao động, hợp đồng, phê duyệt và tuân thủ pháp luật.',
+      'Đề xuất cách triển khai để tài liệu không chỉ đẹp trên giấy mà còn dùng được trong thực tế.',
+    ],
+    strengths: [
+      'An Luật nhìn quy chế nội bộ như một phần của sức khỏe pháp lý doanh nghiệp, không phải một bộ tài liệu tách rời.',
+      'Có kinh nghiệm nối quy chế với các vấn đề thường gặp ở nhân sự, hợp đồng và phân quyền nội bộ.',
+      'Ưu tiên tính dùng được, chứ không biến quy chế thành một bộ giấy tờ khó sống cùng doanh nghiệp.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho quy chế nội bộ',
+    checklistItems: [
+      'Các quy chế, quy trình, nội quy hoặc tài liệu nội bộ đang dùng hiện nay.',
+      'Sơ đồ tổ chức, phân quyền, thẩm quyền ký hoặc cơ chế phối hợp phòng ban nếu có.',
+      'Những nhóm vấn đề đang lặp lại: chậm phê duyệt, sai thẩm quyền, lộ thông tin, xung đột trách nhiệm.',
+      'Các mẫu biểu hoặc luồng công việc nội bộ đang gây nhiều vướng mắc nhất.',
+      'Mục tiêu kỳ vọng: chuẩn hóa, giảm rủi ro, hỗ trợ tăng trưởng hay xử lý hậu quả của một sự cố đã xảy ra.',
+    ],
+    faq: [
+      {
+        question: 'Doanh nghiệp nhỏ có cần quy chế nội bộ không?',
+        answer:
+          'Có, nhưng mức độ và cách thiết kế sẽ khác. Quy chế tốt là quy chế vừa đủ với quy mô hiện tại nhưng không quá sơ sài để rồi vỡ ra khi doanh nghiệp tăng tốc.',
+      },
+      {
+        question: 'Có thể chỉ sửa một vài quy chế quan trọng trước không?',
+        answer:
+          'Hoàn toàn có thể. Nhiều doanh nghiệp nên bắt đầu từ các điểm nóng trước, rồi mới mở rộng sang bộ tài liệu đầy đủ hơn.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về quy chế nội bộ',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/doanh-nghiep/so-huu-tri-tue',
+    navLabel: 'Sở hữu trí tuệ',
+    eyebrow: 'Doanh nghiệp',
+    title: 'Sở hữu trí tuệ cần được hiểu sớm để doanh nghiệp không mất quyền ngay trên tài sản của mình',
+    summary:
+      'Trang này dành cho doanh nghiệp đang cần xác lập, rà soát hoặc bảo vệ quyền sở hữu trí tuệ liên quan đến thương hiệu, nhãn hiệu, sáng tạo, nội dung hoặc tài sản vô hình khác.',
+    intro:
+      'Rất nhiều doanh nghiệp chỉ nghĩ tới sở hữu trí tuệ khi đã có tranh chấp hoặc khi thương hiệu bắt đầu có giá trị rõ rệt. Nhưng càng để muộn, chi phí sửa sai và bảo vệ quyền càng cao. Điều quan trọng là biết tài sản nào cần bảo vệ trước, bằng cách nào và trong khung thời gian nào.',
+    commonSituations: [
+      'Doanh nghiệp muốn đăng ký, rà soát hoặc củng cố quyền đối với nhãn hiệu, tên thương mại hoặc nhận diện thương hiệu.',
+      'Phát sinh nghi ngờ bị xâm phạm quyền hoặc đang dùng tài sản trí tuệ có rủi ro.',
+      'Cần làm rõ quyền sở hữu đối với nội dung, thiết kế, sản phẩm sáng tạo hoặc tài sản vô hình trong hợp tác.',
+      'Doanh nghiệp muốn đưa sở hữu trí tuệ vào khung vận hành bài bản hơn thay vì xử lý chắp vá.',
+    ],
+    supportScope: [
+      'Giúp xác định nhóm tài sản trí tuệ nào đang cần ưu tiên và mức độ bảo vệ phù hợp.',
+      'Rà soát tình trạng quyền, giấy tờ, hợp đồng và rủi ro liên quan đến sử dụng hoặc khai thác tài sản.',
+      'Đề xuất hướng xác lập, quản lý hoặc bảo vệ quyền theo nhu cầu thực tế của doanh nghiệp.',
+      'Kết nối câu chuyện sở hữu trí tuệ với hợp đồng, nhân sự, hợp tác kinh doanh và tranh chấp nếu có.',
+    ],
+    strengths: [
+      'An Luật tiếp cận sở hữu trí tuệ theo góc nhìn vận hành và thương mại, không chỉ như một thủ tục rời rạc.',
+      'Hiểu rằng doanh nghiệp cần cân đối giữa bảo vệ quyền, chi phí và tốc độ triển khai công việc.',
+      'Có thể đồng hành từ khâu nhận diện rủi ro đến xử lý khi quyền đã bị xâm phạm.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho sở hữu trí tuệ',
+    checklistItems: [
+      'Danh sách thương hiệu, nhãn hiệu, tài sản sáng tạo hoặc nội dung doanh nghiệp muốn bảo vệ.',
+      'Giấy tờ đăng ký, hồ sơ sử dụng, hợp đồng thuê thiết kế, chuyển giao hoặc hợp tác liên quan nếu có.',
+      'Thông tin về việc sử dụng thực tế: ở đâu, bởi ai, từ khi nào, trong phạm vi nào.',
+      'Những dấu hiệu rủi ro đang thấy: bị sao chép, tranh chấp tên, không rõ quyền sở hữu hoặc xung đột hợp tác.',
+      'Mục tiêu chính: xác lập quyền, rà soát an toàn hay xử lý một rủi ro đã phát sinh.',
+    ],
+    faq: [
+      {
+        question: 'Doanh nghiệp mới có cần quan tâm sở hữu trí tuệ sớm không?',
+        answer:
+          'Rất nên. Có những bước bảo vệ sớm giúp doanh nghiệp tránh mất rất nhiều công sức khi thương hiệu bắt đầu phát triển nhanh hơn.',
+      },
+      {
+        question: 'Nếu chưa chắc tài sản của mình có đủ điều kiện bảo vệ không thì sao?',
+        answer:
+          'Đó là lúc nên rà soát. Mục tiêu đầu tiên không phải lúc nào cũng là đăng ký ngay, mà là hiểu đúng mình đang có gì và nên ưu tiên cái gì trước.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về sở hữu trí tuệ',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
+    secondaryCtaHref: '/doanh-nghiep',
+  },
+  {
+    href: '/doanh-nghiep/ma-dau-tu',
+    navLabel: 'M&A / đầu tư',
+    eyebrow: 'Doanh nghiệp',
+    title: 'M&A và đầu tư cần đủ tỉnh táo để thấy rủi ro trước khi chốt giao dịch',
+    summary:
+      'Phù hợp khi doanh nghiệp hoặc nhà đầu tư cần rà soát tình trạng pháp lý, chuẩn bị giao dịch mua bán - sáp nhập, chuyển nhượng hoặc đánh giá rủi ro trước một quyết định đầu tư.',
+    intro:
+      'Những giao dịch mua bán, sáp nhập hoặc đầu tư không chỉ là câu chuyện giá trị thương mại. Hồ sơ pháp lý, cấu trúc sở hữu, nghĩa vụ đang treo và cách chuyển giao quyền mới là phần quyết định giao dịch có đi được tới đích hay không.',
+    commonSituations: [
+      'Nhà đầu tư muốn rà soát tình trạng pháp lý doanh nghiệp mục tiêu trước khi ra quyết định.',
+      'Doanh nghiệp cần chuẩn bị cho giao dịch chuyển nhượng, sáp nhập hoặc tái cấu trúc sở hữu.',
+      'Các bên đang thương lượng nhưng chưa rõ rủi ro nằm ở đâu trong hồ sơ pháp lý hiện tại.',
+      'Cần một luật sư giúp nối câu chuyện đầu tư với hợp đồng, cổ đông, lao động và thủ tục liên quan.',
+    ],
+    supportScope: [
+      'Rà soát tình trạng pháp lý, cấu trúc sở hữu và những nghĩa vụ có thể ảnh hưởng đến giao dịch.',
+      'Hỗ trợ nhìn ra các vùng rủi ro cần thương lượng hoặc xử lý trước khi chốt.',
+      'Đề xuất bước đi phù hợp trong quá trình chuẩn bị, thương lượng và chuyển giao.',
+      'Giúp doanh nghiệp hoặc nhà đầu tư có cái nhìn thực tế hơn về nhịp độ và mức độ phức tạp của giao dịch.',
+    ],
+    strengths: [
+      'An Luật kết hợp kinh nghiệm tư vấn doanh nghiệp vận hành với góc nhìn giao dịch để đọc rủi ro toàn diện hơn.',
+      'Không đẩy giao dịch đi quá nhanh khi nền hồ sơ còn nhiều khoảng mờ.',
+      'Ưu tiên giúp khách hàng ra quyết định tỉnh táo thay vì chỉ làm thủ tục cho xong.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho M&A / đầu tư',
+    checklistItems: [
+      'Thông tin sơ bộ về doanh nghiệp mục tiêu hoặc giao dịch đang dự kiến thực hiện.',
+      'Điều lệ, đăng ký doanh nghiệp, hồ sơ góp vốn, thay đổi sở hữu và các tài liệu pháp lý chính.',
+      'Các hợp đồng, nghĩa vụ, tranh chấp, công nợ hoặc ràng buộc đang tồn tại nếu đã biết.',
+      'Mốc thời gian dự kiến của giao dịch và những bước thương lượng đang diễn ra.',
+      'Mục tiêu của bên liên hệ: mua, bán, nhận đầu tư, thoái vốn hay tái cấu trúc.',
+    ],
+    faq: [
+      {
+        question: 'Có cần rà soát pháp lý khi giao dịch vẫn còn ở giai đoạn thăm dò không?',
+        answer:
+          'Có thể rất nên. Rà sớm giúp các bên biết chỗ nào cần hỏi kỹ hơn, chỗ nào chưa nên cam kết quá nhanh.',
+      },
+      {
+        question: 'M&A có phải chỉ phù hợp với doanh nghiệp lớn không?',
+        answer:
+          'Không. Giao dịch có thể ở nhiều quy mô khác nhau; điều quan trọng là cách đánh giá rủi ro phải tương xứng với mức độ ảnh hưởng của quyết định đó.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về M&A / đầu tư',
     primaryCtaHref: '/lien-he',
     secondaryCtaLabel: 'Quay lại trang Doanh nghiệp',
     secondaryCtaHref: '/doanh-nghiep',
@@ -1147,6 +1354,110 @@ export const practicePages: PracticePageContent[] = [
     relatedLinks: [
       { label: 'Thu hồi nợ / thương lượng', href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong' },
       { label: 'Tranh chấp kinh doanh', href: '/tranh-tung-thu-hoi-no/tranh-chap-kinh-doanh' },
+      { label: 'Tranh chấp lao động', href: '/tranh-tung-thu-hoi-no/tranh-chap-lao-dong' },
+      { label: 'Tranh chấp cổ đông', href: '/tranh-tung-thu-hoi-no/tranh-chap-co-dong' },
     ],
+  },
+  {
+    href: '/tranh-tung-thu-hoi-no/tranh-chap-lao-dong',
+    navLabel: 'Tranh chấp lao động',
+    eyebrow: 'Tranh tụng & thu hồi nợ',
+    title: 'Tranh chấp lao động cần được xử lý vừa đúng luật, vừa hiểu đúng bối cảnh quan hệ lao động',
+    summary:
+      'Trang này dành cho doanh nghiệp, HR hoặc người lao động khi mâu thuẫn đã vượt qua giai đoạn trao đổi nội bộ và cần một cách nhìn nghiêm túc hơn về hồ sơ, chiến lược và rủi ro tranh chấp.',
+    intro:
+      'Tranh chấp lao động không chỉ là cuộc đối đầu giữa hai lập luận pháp lý. Nó còn là câu chuyện của hồ sơ nhân sự, cách doanh nghiệp xử lý quy trình, thái độ làm việc giữa các bên và những điểm rất nhỏ có thể làm thay đổi cục diện vụ việc.',
+    commonSituations: [
+      'Phát sinh tranh chấp về chấm dứt hợp đồng, sa thải, kỷ luật, lương thưởng hoặc bảo hiểm.',
+      'Một bên cho rằng quy trình xử lý lao động đã sai hoặc quyền lợi bị xâm phạm.',
+      'Doanh nghiệp cần rà soát hồ sơ trước khi làm việc với cơ quan chức năng hoặc bước vào tranh tụng.',
+      'Người lao động cần biết hồ sơ mình đang mạnh, yếu ở đâu và nên chuẩn bị gì tiếp theo.',
+    ],
+    supportScope: [
+      'Rà soát toàn bộ hồ sơ lao động, quyết định, thông báo và diễn biến xử lý thực tế.',
+      'Làm rõ rủi ro pháp lý của từng bên và những điểm có thể xoay chuyển cục diện tranh chấp.',
+      'Đề xuất hướng thương lượng tiếp, làm việc với cơ quan chức năng hoặc chuẩn bị hồ sơ tranh tụng.',
+      'Giúp khách hàng nhìn vụ việc dưới cả góc độ pháp luật và quan hệ lao động thực tế.',
+    ],
+    strengths: [
+      'Lao động - nhân sự là một mảng chuyên sâu gắn với An Luật trong nhiều năm hoạt động.',
+      'Hiểu cả góc nhìn người sử dụng lao động lẫn người lao động khi đánh giá hồ sơ tranh chấp.',
+      'Không chỉ nhìn vào điều luật, mà nhìn vào cả quy trình và văn hóa xử lý của doanh nghiệp.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tranh chấp lao động',
+    checklistItems: [
+      'Hợp đồng lao động, phụ lục, nội quy, quyết định, thông báo và hồ sơ nhân sự liên quan.',
+      'Bảng lương, chấm công, dữ liệu bảo hiểm hoặc các chứng từ liên quan quyền lợi tranh chấp.',
+      'Tin nhắn, email, biên bản họp hoặc trao đổi nội bộ thể hiện diễn biến vụ việc.',
+      'Mốc thời gian chính: bắt đầu làm việc, phát sinh vi phạm, thông báo xử lý, chấm dứt hoặc khiếu nại.',
+      'Mục tiêu của bên liên hệ: thương lượng, bảo vệ quyết định, đòi quyền lợi hay chuẩn bị tranh tụng.',
+    ],
+    faq: [
+      {
+        question: 'Doanh nghiệp có nên rà hồ sơ trước khi tranh chấp chính thức nổ ra không?',
+        answer:
+          'Rất nên. Với tranh chấp lao động, nhiều khi hồ sơ và quy trình quyết định rất lớn đến khả năng phòng thủ hoặc thương lượng của doanh nghiệp.',
+      },
+      {
+        question: 'Người lao động chưa chắc mình đủ hồ sơ thì có nên trao đổi không?',
+        answer:
+          'Có. Biết sớm chỗ nào đang yếu vẫn tốt hơn nhiều so với việc đợi đến khi mọi thời hạn quan trọng đã trôi qua.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tranh chấp lao động',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Tranh tụng & Thu hồi nợ',
+    secondaryCtaHref: '/tranh-tung-thu-hoi-no',
+  },
+  {
+    href: '/tranh-tung-thu-hoi-no/tranh-chap-co-dong',
+    navLabel: 'Tranh chấp cổ đông',
+    eyebrow: 'Tranh tụng & thu hồi nợ',
+    title: 'Tranh chấp cổ đông cần được nhìn như một cuộc khủng hoảng cấu trúc, không chỉ là một vụ cãi nhau',
+    summary:
+      'Phù hợp khi mâu thuẫn giữa cổ đông, thành viên góp vốn hoặc nhóm sáng lập đã chuyển sang mức đe dọa quyền quản lý, quyền sở hữu hoặc sự ổn định vận hành của doanh nghiệp.',
+    intro:
+      'Tranh chấp cổ đông thường kéo theo nhiều lớp rủi ro cùng lúc: hồ sơ pháp lý, quyền lực quản trị, dòng vận hành, nhân sự chủ chốt và cả niềm tin nội bộ. Vì vậy, việc đánh giá sớm cấu trúc tranh chấp và đòn bẩy của từng bên là cực kỳ quan trọng.',
+    commonSituations: [
+      'Cổ đông hoặc thành viên góp vốn có mâu thuẫn về quyền biểu quyết, điều hành, chuyển nhượng hoặc lợi ích kinh tế.',
+      'Xuất hiện tranh cãi về hiệu lực quyết định, nghị quyết, người đại diện hoặc tính hợp lệ của hồ sơ nội bộ.',
+      'Doanh nghiệp bị chậm vận hành vì tranh chấp giữa các nhóm cổ đông sáng lập.',
+      'Các bên cần đánh giá nên thương lượng, tái cấu trúc hay chuẩn bị cho tranh chấp sâu hơn.',
+    ],
+    supportScope: [
+      'Rà soát điều lệ, hồ sơ góp vốn, nghị quyết, biên bản họp và những tài liệu quyết định cấu trúc quyền lực.',
+      'Đánh giá thế pháp lý hiện tại của từng bên và những điểm dễ bị phản công.',
+      'Đề xuất hướng thương lượng, tái cấu trúc hoặc chuẩn bị hồ sơ cho tranh chấp sâu hơn khi cần.',
+      'Giúp doanh nghiệp nhìn tranh chấp không chỉ dưới góc độ đúng sai mà cả tác động vận hành và đường lui.',
+    ],
+    strengths: [
+      'An Luật hiểu tranh chấp cổ đông là dạng tranh chấp có blast radius rất lớn lên doanh nghiệp đang vận hành.',
+      'Có thể nối hồ sơ cổ đông với các vấn đề điều lệ, người đại diện, hợp đồng và quản trị nội bộ.',
+      'Ưu tiên giúp khách hàng thấy toàn cảnh trước khi tự đẩy vụ việc vào thế khó rút.',
+    ],
+    checklistTitle: 'Phiếu chuẩn bị cho tranh chấp cổ đông',
+    checklistItems: [
+      'Điều lệ, thỏa thuận cổ đông/thành viên, hồ sơ góp vốn, chuyển nhượng và thay đổi đăng ký doanh nghiệp.',
+      'Nghị quyết, biên bản họp, quyết định nội bộ và các tài liệu liên quan đến quyền quản lý hoặc quyền biểu quyết.',
+      'Email, tin nhắn, trao đổi thể hiện mâu thuẫn hoặc cam kết giữa các bên.',
+      'Mô tả ngắn về điểm xung đột chính và tác động hiện tại lên hoạt động doanh nghiệp.',
+      'Mục tiêu ưu tiên: giữ vận hành, bảo vệ quyền quản lý, thương lượng thoái vốn hay chuẩn bị tranh chấp sâu hơn.',
+    ],
+    faq: [
+      {
+        question: 'Tranh chấp cổ đông có thể xử lý từ sớm khi chưa ra tòa không?',
+        answer:
+          'Có, và đó thường là thời điểm tốt hơn. Càng để lâu, cấu trúc doanh nghiệp càng bị kéo mỏng và lựa chọn chiến lược càng ít đi.',
+      },
+      {
+        question: 'Nếu hồ sơ nội bộ đang lộn xộn thì có còn cơ hội xử lý không?',
+        answer:
+          'Vẫn có thể, nhưng cần đọc lại rất kỹ để biết tài liệu nào còn giá trị, tài liệu nào tạo rủi ro và phần nào cần được gia cố ngay.',
+      },
+    ],
+    primaryCtaLabel: 'Trao đổi về tranh chấp cổ đông',
+    primaryCtaHref: '/lien-he',
+    secondaryCtaLabel: 'Quay lại Tranh tụng & Thu hồi nợ',
+    secondaryCtaHref: '/tranh-tung-thu-hoi-no',
   },
 ];
