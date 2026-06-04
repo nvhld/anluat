@@ -2,10 +2,10 @@
 
 ```yaml
 document_id: anluat_live_tasks
-version: 1.0
+version: 1.1
 status: active_task_ledger
 language: vi-VN
-last_updated: 2026-06-03
+last_updated: 2026-06-04
 ```
 
 ## 1. Board Rules
@@ -22,6 +22,7 @@ task_board_rules:
     - deferred
 
   scope_values:
+    - phase_2_triage_rebuild
     - sprint_0_poc
     - mvp_a
     - mvp_b_gated
@@ -38,6 +39,8 @@ task_board_rules:
     - Every POC task needs pass/fail evidence.
     - Every failed POC needs fallback and MVP recommendation impact.
     - Every next action should carry a suggested model and reasoning level when possible.
+    - Every UX-facing task should state one primary user decision for that screen.
+    - Less Is More applies: prefer fewer CTAs, fewer competing blocks and less duplicate copy per screen.
 ```
 
 ## 2. Sprint 0 POC Tasks

@@ -2,14 +2,14 @@
 
 ```yaml
 document_id: anluat_project_harness
-version: 1.0
+version: 1.1
 status: active_execution_harness
 language: vi-VN
 project: Website mới An Luật
-last_updated: 2026-06-03
+last_updated: 2026-06-04
 purpose: >
   Thiết lập harness vận hành, kiểm thử, multi-agent coordination và release gates
-  cho MVP-A core và MVP-B gated payment/auto-book module.
+  cho triage rebuild phase, MVP-A core và MVP-B gated payment/auto-book module.
 ```
 
 ## 1. Harness North Star
@@ -18,6 +18,8 @@ Harness này không phải thêm giấy tờ cho đẹp. Nó là bộ dây an to
 
 ```yaml
 harness_goals:
+  - Giữ hướng product là legal triage system, không trôi về brochure site.
+  - Bắt buộc screen-first và Less Is More ở các màn hình chuyển đổi chính.
   - Giữ MVP-A là mặc định.
   - Chặn MVP-B trước Sprint 0 POC.
   - Chặn timeline trước Sprint 0 POC report.
@@ -31,6 +33,15 @@ harness_goals:
 
 ```yaml
 execution_modes:
+  phase_2_triage_rebuild:
+    goal: Rebuild public UX thành homepage command center, 1 GIỜ GẶP NHƯ landing, Legal Safety Map và Legal Health Score.
+    default: true
+    operating_rules:
+      - triage_system_first
+      - screen_first
+      - less_is_more
+      - public_polished_private_experimental
+
   sprint_0_poc:
     goal: Prove or reject risky integration assumptions before final timeline.
     output:
@@ -52,7 +63,7 @@ execution_modes:
       - PO_approval
 
   post_mvp:
-    goal: Legal Health Score, Legal Safety Map, LLM refinement, document upload, advanced CRM.
+    goal: LLM refinement, document upload, advanced CRM, payment/scheduling expansion and deeper operational automations.
 ```
 
 ## 3. Sprint 0 POC Harness

@@ -36,13 +36,32 @@ export type QuickAccessSection = {
   links: Array<{ label: string; href: string }>;
 };
 
+export type IntakeDoor = {
+  title: string;
+  description: string;
+  href: string;
+  audience: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+};
+
+export type LegalSafetyMapQuestion = {
+  id: 'role' | 'concern' | 'stage';
+  label: string;
+  helper: string;
+  options: Array<{
+    value: string;
+    label: string;
+    hint: string;
+  }>;
+};
+
 export const mainNavigation: NavigationItem[] = [
+  { label: '5 cửa tiếp nhận', href: '/#nam-cua-tiep-nhan' },
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
-  { label: 'Cá nhân', href: '/ca-nhan' },
-  { label: 'Lao động & Nhân sự', href: '/lao-dong-nhan-su' },
   { label: 'Doanh nghiệp', href: '/doanh-nghiep' },
-  { label: 'Tranh tụng & Thu hồi nợ', href: '/tranh-tung-thu-hoi-no' },
   { label: 'Luật sư Quỳnh Như', href: '/luat-su-dinh-thi-quynh-nhu' },
+  { label: 'Góc chia sẻ', href: '/goc-chia-se' },
   { label: 'Về An Luật', href: '/ve-an-luat' },
 ];
 
@@ -63,14 +82,34 @@ export const oneHourWithNhuContent = {
     'Biết nên thương lượng, chờ thêm, gửi văn bản hay khởi kiện.',
     'Có định hướng riêng trước khi đưa ra quyết định lớn.',
   ],
-  howItWorks: [
+  suitabilityCards: [
     {
-      title: 'Bạn liên hệ với An Luật',
-      body: 'Hiện website đang ưu tiên tiếp nhận qua hotline để thư ký ghi nhận đúng bối cảnh ban đầu và hướng dẫn kênh làm việc phù hợp.',
+      title: 'Cá nhân và gia đình',
+      body: 'Khi câu chuyện liên quan đến ly hôn, con cái, tài sản, thừa kế hoặc một quyết định riêng tư khó nói thành lời.',
     },
     {
-      title: 'An Luật xác nhận cách tiếp nhận',
-      body: 'Nếu vụ việc cần rà soát thêm, thư ký hoặc luật sư sẽ hỏi rõ hơn trước khi đề xuất buổi gặp phù hợp.',
+      title: 'Người lao động và HR',
+      body: 'Khi bạn cần hiểu vị trí pháp lý của mình trước khi phản hồi, thương lượng, xử lý kỷ luật hoặc chấm dứt quan hệ lao động.',
+    },
+    {
+      title: 'Founder và chủ doanh nghiệp',
+      body: 'Khi một quyết định về hợp đồng, nhân sự, cổ đông, công nợ hay vận hành cần được nhìn đúng trước khi đi tiếp.',
+    },
+  ],
+  outcomes: [
+    'Vấn đề pháp lý chính của mình đang nằm ở đâu.',
+    'Hồ sơ hoặc chứng cứ nào nên giữ và chuẩn bị trước.',
+    'Nên thương lượng, chờ thêm, gửi văn bản hay đi sâu hơn.',
+    'Bước tiếp theo nếu muốn An Luật tiếp tục đồng hành.',
+  ],
+  howItWorks: [
+    {
+      title: 'Bạn gửi thông tin sơ bộ',
+      body: 'Chỉ cần chọn nhóm vấn đề, mức độ khẩn cấp và cách An Luật nên liên hệ lại. Bạn chưa cần kể hết mọi chi tiết ở bước đầu.',
+    },
+    {
+      title: 'An Luật phân loại',
+      body: 'Đội ngũ xem sơ bộ để xác định đây là buổi định hướng phù hợp, cần secretary review thêm hay nên đi theo một luồng khác.',
     },
     {
       title: 'Bạn chuẩn bị theo phiếu gợi ý',
@@ -86,6 +125,11 @@ export const oneHourWithNhuContent = {
     'Thay thế toàn bộ quá trình đại diện hoặc tranh tụng.',
     'Xử lý hồ sơ phức tạp mà chưa có bước rà soát riêng.',
   ],
+  trustNotes: [
+    'Website không hiển thị giá công khai cho buổi này.',
+    'Phí tư vấn được xác nhận sau khi An Luật xem sơ bộ nội dung vụ việc.',
+    'Nếu vụ việc cần rà soát thêm, thư ký hoặc luật sư sẽ gọi xác nhận trước khi xếp lịch.',
+  ],
   checklist: [
     'Tóm tắt sự việc theo mốc thời gian.',
     'Danh sách các bên liên quan.',
@@ -93,7 +137,119 @@ export const oneHourWithNhuContent = {
     'Điều bạn muốn đạt được sau buổi tư vấn.',
     'Những thời hạn gấp nếu có: lịch tòa, hạn phản hồi, hạn thanh toán, hạn ký.',
   ],
+  preparationGroups: [
+    {
+      title: 'Gia đình, tài sản, thừa kế',
+      items: ['Giấy tờ hôn nhân hoặc tài sản', 'Mốc thời gian chính', 'Tin nhắn, email hoặc thỏa thuận đang có'],
+    },
+    {
+      title: 'Lao động và nhân sự',
+      items: ['Hợp đồng và phụ lục', 'Quyết định hoặc thông báo liên quan', 'Bảng lương, chấm công hoặc biên bản nếu có'],
+    },
+    {
+      title: 'Doanh nghiệp đang vận hành',
+      items: ['Thông tin doanh nghiệp và người đại diện', 'Hợp đồng, hồ sơ giao dịch', 'Mục tiêu xử lý và các thời hạn quan trọng'],
+    },
+    {
+      title: 'Tranh chấp và thu hồi nợ',
+      items: ['Hợp đồng hoặc chứng cứ giao dịch', 'Yêu cầu thanh toán hoặc trao đổi trước đó', 'Tình trạng hiện tại của vụ việc'],
+    },
+  ],
 };
+
+export const intakeDoors: IntakeDoor[] = [
+  {
+    title: 'Gia đình, tài sản, thừa kế',
+    description: 'Khi chuyện pháp lý dính trực tiếp đến gia đình, con cái, nhà đất, tài sản hoặc một quyết định rất riêng tư.',
+    href: '/ca-nhan',
+    audience: 'Cá nhân',
+    primaryLabel: 'Xem lối vào này',
+    secondaryLabel: 'Phù hợp với 1 GIỜ GẶP NHƯ',
+  },
+  {
+    title: 'Lao động và nhân sự',
+    description: 'Cho người lao động, HR và doanh nghiệp đang cần hiểu đúng vị trí pháp lý của mình trước khi phản hồi hoặc xử lý tiếp.',
+    href: '/lao-dong-nhan-su',
+    audience: 'Người lao động / HR',
+    primaryLabel: 'Xem lối vào này',
+    secondaryLabel: 'Cần định hướng nhanh',
+  },
+  {
+    title: 'Doanh nghiệp đang vận hành',
+    description: 'Khi hợp đồng, nhân sự, cổ đông, quy chế hoặc vận hành bắt đầu tạo cảm giác có rủi ro nhưng chưa rõ nên xử lý từ đâu.',
+    href: '/doanh-nghiep',
+    audience: 'Founder / Doanh nghiệp',
+    primaryLabel: 'Xem lối vào này',
+    secondaryLabel: 'Có thể cần Legal Health Score',
+  },
+  {
+    title: 'Tranh tụng và thu hồi nợ',
+    description: 'Khi vụ việc đã căng, có dấu hiệu tranh chấp, nhận văn bản từ bên kia hoặc cần giữ chứng cứ để đi đúng bước.',
+    href: '/tranh-tung-thu-hoi-no',
+    audience: 'Vụ việc đang leo thang',
+    primaryLabel: 'Xem lối vào này',
+    secondaryLabel: 'Cần secretary review',
+  },
+  {
+    title: 'Đào tạo và sức khỏe pháp lý',
+    description: 'Khi tổ chức cần nhìn lại rủi ro nội bộ, xây chương trình đào tạo hoặc phòng ngừa sai sót lặp lại.',
+    href: '/dao-tao',
+    audience: 'Đội ngũ / Tổ chức',
+    primaryLabel: 'Xem lối vào này',
+    secondaryLabel: 'Thiên về phòng ngừa',
+  },
+];
+
+export const homeTrustHighlights = [
+  'Thành lập từ năm 2006',
+  'Tiếp nhận cởi mở, định hướng rõ ràng',
+  'Ưu tiên sự kín kẽ và chuẩn bị đúng trước khi đi sâu',
+];
+
+export const founderTimeline = [
+  { label: '2006', body: 'Luật sư Đinh Thị Quỳnh Như thành lập An Luật.' },
+  { label: '2020', body: 'Mở rộng hoạt động với chi nhánh Bà Rịa - Vũng Tàu.' },
+  { label: 'Hiện tại', body: 'Đồng hành cùng cá nhân, doanh nghiệp, đào tạo và các tình huống cần định hướng riêng.' },
+];
+
+export const legalSafetyMapQuestions: LegalSafetyMapQuestion[] = [
+  {
+    id: 'role',
+    label: 'Bạn đang ở vai trò nào?',
+    helper: 'Chỉ cần chọn nhóm gần nhất với mình.',
+    options: [
+      { value: 'individual', label: 'Cá nhân', hint: 'Gia đình, tài sản, thừa kế hoặc việc riêng tư.' },
+      { value: 'employee', label: 'Người lao động', hint: 'Hợp đồng, lương, nghỉ việc, kỷ luật hoặc sa thải.' },
+      { value: 'founder', label: 'Founder / Chủ doanh nghiệp', hint: 'Hợp đồng, cổ đông, nội bộ hoặc vận hành.' },
+      { value: 'hr', label: 'HR / Quản lý nhân sự', hint: 'Quan hệ lao động, hồ sơ, quy trình hoặc tái cấu trúc.' },
+      { value: 'team', label: 'Tổ chức / Đội ngũ', hint: 'Đào tạo, rà soát rủi ro hoặc chuẩn hóa nội bộ.' },
+    ],
+  },
+  {
+    id: 'concern',
+    label: 'Bạn đang lo nhất điều gì?',
+    helper: 'Đừng cố gọi tên đúng thuật ngữ pháp lý. Chọn điều gần nhất.',
+    options: [
+      { value: 'family', label: 'Gia đình, tài sản, thừa kế', hint: 'Ly hôn, quyền nuôi con, tài sản chung riêng hoặc mâu thuẫn thừa kế.' },
+      { value: 'labor', label: 'Lao động, nghỉ việc, kỷ luật', hint: 'Người lao động, HR hoặc doanh nghiệp đang xử lý quan hệ lao động.' },
+      { value: 'operations', label: 'Hợp đồng, nội bộ, vận hành', hint: 'Quy trình, hợp đồng, cổ đông hoặc rủi ro vận hành.' },
+      { value: 'dispute', label: 'Tranh chấp, công nợ, văn bản từ bên kia', hint: 'Vụ việc đã có dấu hiệu leo thang hoặc cần giữ chứng cứ.' },
+      { value: 'prevention', label: 'Phòng ngừa, đào tạo, sức khỏe pháp lý', hint: 'Muốn rà soát sớm trước khi trả giá vì một sai sót cũ.' },
+    ],
+  },
+  {
+    id: 'stage',
+    label: 'Việc đang ở giai đoạn nào?',
+    helper: 'Mức độ khẩn không phải để gây áp lực, mà để An Luật mở đúng cửa.',
+    options: [
+      { value: 'unclear', label: 'Tôi còn khá rối', hint: 'Chưa chắc vấn đề pháp lý chính nằm ở đâu.' },
+      { value: 'direction', label: 'Tôi cần định hướng riêng', hint: 'Cần người giúp sắp xếp lại câu chuyện và bước tiếp theo.' },
+      { value: 'notice', label: 'Tôi đã nhận văn bản / tín hiệu căng', hint: 'Có công văn, thông báo, đòi nợ, kỷ luật hoặc nguy cơ tranh chấp.' },
+      { value: 'escalating', label: 'Vụ việc đang leo thang', hint: 'Mâu thuẫn tăng nhanh, cần phản hồi hoặc giữ chứng cứ đúng.' },
+      { value: 'preventive', label: 'Tôi muốn phòng ngừa sớm', hint: 'Muốn chuẩn hóa trước khi vấn đề bùng lên.' },
+    ],
+  },
+];
 
 export const founderProfile = {
   roleChips: ['Thành lập An Luật từ năm 2006', 'Đồng hành cùng cá nhân và doanh nghiệp', 'Tư vấn theo hướng rõ - đủ - bình tĩnh'],
