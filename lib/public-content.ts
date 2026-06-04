@@ -30,6 +30,12 @@ export type InsightArticle = {
   category: string;
 };
 
+export type QuickAccessSection = {
+  title: string;
+  description: string;
+  links: Array<{ label: string; href: string }>;
+};
+
 export const mainNavigation: NavigationItem[] = [
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
   { label: 'Cá nhân', href: '/ca-nhan' },
@@ -43,6 +49,8 @@ export const mainNavigation: NavigationItem[] = [
 export const footerLinks: NavigationItem[] = [
   { label: '1 GIỜ GẶP NHƯ', href: '/1-gio-gap-nhu' },
   { label: 'Liên hệ', href: '/lien-he' },
+  { label: 'Đào tạo', href: '/dao-tao' },
+  { label: 'Về An Luật', href: '/ve-an-luat' },
   { label: 'Góc chia sẻ', href: '/goc-chia-se' },
   { label: 'Quyền riêng tư', href: '/quyen-rieng-tu' },
 ];
@@ -126,6 +134,13 @@ export const contactFlow = [
 
 export const insightArticles: InsightArticle[] = [
   {
+    category: 'Cá nhân',
+    title: 'Không phải mọi chuyện gia đình đều nên chờ đến lúc “đủ hồ sơ” mới đi hỏi luật sư.',
+    summary:
+      'Nhiều quyết định ở mảng gia đình, tài sản và thừa kế cần được nhìn sớm để tránh tự làm khó hồ sơ của chính mình.',
+    href: '/ca-nhan/tai-san-thua-ke',
+  },
+  {
     category: 'Doanh nghiệp',
     title: 'Tư vấn pháp lý thường xuyên cho doanh nghiệp không phải là “có việc mới gọi”.',
     summary:
@@ -147,11 +162,76 @@ export const insightArticles: InsightArticle[] = [
     href: '/lao-dong-nhan-su/doanh-nghiep-hr',
   },
   {
+    category: 'Nội bộ doanh nghiệp',
+    title: 'Quy chế nội bộ không phải để cất trong thư mục chung, mà để doanh nghiệp bớt va vào cùng một lỗi nhiều lần.',
+    summary:
+      'Quy chế rõ giúp doanh nghiệp giảm xung đột thẩm quyền, xử lý việc nhanh hơn và đỡ trả giá vì những “ngầm hiểu” đã không còn đúng.',
+    href: '/doanh-nghiep/quy-che-noi-bo',
+  },
+  {
+    category: 'Cổ đông',
+    title: 'Mâu thuẫn cổ đông hiếm khi bùng lên chỉ vì một cuộc họp. Nó thường được nuôi lớn bởi các khoảng mờ tích lũy từ trước.',
+    summary:
+      'Điều lệ, góp vốn và quyền quyết định cần được rà soát sớm nếu doanh nghiệp muốn giữ cả cấu trúc lẫn nhịp vận hành.',
+    href: '/doanh-nghiep/gop-von-co-dong',
+  },
+  {
     category: 'Tranh chấp',
     title: 'Thu hồi nợ đúng luật là bài toán vừa cần tốc độ, vừa cần giữ chứng cứ và đường lui.',
     summary:
       'Không phải khoản nợ nào cũng nên nhảy ngay vào khởi kiện; việc đánh giá hồ sơ và chiến lược thương lượng đúng lúc quan trọng không kém.',
     href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong',
+  },
+  {
+    category: 'Đào tạo',
+    title: 'Đào tạo pháp lý hiệu quả không phải là buổi học nhiều điều luật nhất, mà là buổi giúp đội ngũ bớt phạm lại cùng một lỗi.',
+    summary:
+      'Khi chương trình đào tạo bám đúng tình huống vận hành, nó thường trở thành điểm khởi đầu rất tốt cho việc chuẩn hóa nội bộ.',
+    href: '/dao-tao/phap-ly-noi-bo',
+  },
+  {
+    category: 'Tranh chấp',
+    title: 'Tranh chấp lao động và tranh chấp cổ đông đều có điểm giống nhau: hồ sơ và quy trình thường quyết định cục diện sớm hơn cảm xúc.',
+    summary:
+      'Càng đọc lại hồ sơ và vị thế của mình sớm, doanh nghiệp càng có nhiều lựa chọn chiến lược hơn trước khi vụ việc đi quá xa.',
+    href: '/tranh-tung-thu-hoi-no/tranh-chap-lao-dong',
+  },
+];
+
+export const quickAccessSections: QuickAccessSection[] = [
+  {
+    title: 'Cá nhân',
+    description: 'Các lối vào rõ nhất cho khách hàng cá nhân và gia đình.',
+    links: [
+      { label: 'Gia đình, ly hôn, tài sản', href: '/ca-nhan/gia-dinh-ly-hon' },
+      { label: 'Tài sản & thừa kế', href: '/ca-nhan/tai-san-thua-ke' },
+      { label: 'Tranh chấp dân sự', href: '/ca-nhan/tranh-chap-dan-su' },
+      { label: 'Thu hồi nợ cá nhân', href: '/ca-nhan/thu-hoi-no-ca-nhan' },
+    ],
+  },
+  {
+    title: 'Doanh nghiệp',
+    description: 'Những mảng doanh nghiệp thường cần đi sâu sớm.',
+    links: [
+      { label: 'Tư vấn thường xuyên', href: '/doanh-nghiep/tu-van-thuong-xuyen' },
+      { label: 'Hợp đồng', href: '/doanh-nghiep/hop-dong' },
+      { label: 'Góp vốn / cổ đông', href: '/doanh-nghiep/gop-von-co-dong' },
+      { label: 'Quy chế nội bộ', href: '/doanh-nghiep/quy-che-noi-bo' },
+      { label: 'Sở hữu trí tuệ', href: '/doanh-nghiep/so-huu-tri-tue' },
+      { label: 'M&A / đầu tư', href: '/doanh-nghiep/ma-dau-tu' },
+    ],
+  },
+  {
+    title: 'Tranh chấp & đào tạo',
+    description: 'Khi vụ việc đã căng hoặc tổ chức cần đi theo hướng phòng ngừa.',
+    links: [
+      { label: 'Thu hồi nợ / thương lượng', href: '/tranh-tung-thu-hoi-no/thu-hoi-no-thuong-luong' },
+      { label: 'Tranh chấp kinh doanh', href: '/tranh-tung-thu-hoi-no/tranh-chap-kinh-doanh' },
+      { label: 'Tranh chấp lao động', href: '/tranh-tung-thu-hoi-no/tranh-chap-lao-dong' },
+      { label: 'Tranh chấp cổ đông', href: '/tranh-tung-thu-hoi-no/tranh-chap-co-dong' },
+      { label: 'Đào tạo pháp lý nội bộ', href: '/dao-tao/phap-ly-noi-bo' },
+      { label: 'Workshop / hội thảo', href: '/dao-tao/workshop-hoi-thao' },
+    ],
   },
 ];
 

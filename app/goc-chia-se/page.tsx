@@ -50,6 +50,31 @@ export default function InsightsHubPage() {
               </Link>
             ))}
           </section>
+
+          <section className="mt-12 rounded-[2rem] bg-brand-primary p-8 text-white md:p-10">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-gold">Bắt đầu đúng chỗ</span>
+            <h2 className="mt-4 font-heading text-3xl font-black md:text-4xl">
+              Nếu một chủ đề ở đây chạm đúng điều bạn đang lo, bước tiếp theo nên là một cuộc trao đổi ngắn.
+            </h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-white/75">
+              Thư ký An Luật sẽ giúp ghi nhận nhóm vấn đề, mức độ khẩn cấp và cách chuẩn bị phù hợp trước khi đi sâu hơn.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/lien-he"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-bold text-brand-primary transition-colors hover:bg-stone-100"
+              >
+                Liên hệ với An Luật
+                <ArrowRight size={15} />
+              </Link>
+              <Link
+                href="/1-gio-gap-nhu"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/20 px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-white/10"
+              >
+                Tìm hiểu 1 GIỜ GẶP NHƯ
+              </Link>
+            </div>
+          </section>
         </div>
       </main>
       <PublicFooter />

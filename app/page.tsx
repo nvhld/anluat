@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import PublicFooter from '@/components/PublicFooter';
 import PublicHeader from '@/components/PublicHeader';
+import { quickAccessSections } from '@/lib/public-content';
 import { site } from '@/lib/site';
 
 const practices = [
@@ -192,6 +193,41 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="border-y border-border-subtle bg-surface/60">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+            <div className="max-w-2xl space-y-3">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-gold">Tìm nhanh theo nhu cầu</span>
+              <h2 className="font-heading text-3xl font-black text-brand-primary md:text-4xl">
+                Muốn đi sâu nhanh hơn, bạn có thể bắt đầu từ đây.
+              </h2>
+              <p className="leading-relaxed text-text-secondary">
+                Các đường dẫn dưới đây gom những chủ đề trọng tâm nhất để người xem không phải lần mò qua quá nhiều trang trước khi chạm đúng nhu cầu của mình.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 xl:grid-cols-3">
+              {quickAccessSections.map((section) => (
+                <article key={section.title} className="rounded-[2rem] border border-border-subtle bg-white p-7">
+                  <h3 className="font-heading text-2xl font-bold text-brand-primary">{section.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">{section.description}</p>
+                  <div className="mt-6 grid gap-3">
+                    {section.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="flex items-center justify-between rounded-2xl border border-border-subtle bg-surface px-4 py-3 text-sm font-bold text-brand-primary transition-colors hover:bg-stone-50"
+                      >
+                        <span>{link.label}</span>
+                        <ArrowRight size={15} />
+                      </Link>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

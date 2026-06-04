@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ve-an-luat',
     '/lien-he',
     '/goc-chia-se',
-    '/chuyen-nghe',
     '/quyen-rieng-tu',
   ];
 
