@@ -12,32 +12,38 @@ import {
   ShieldCheck,
   Users,
 } from 'lucide-react';
+import PublicFooter from '@/components/PublicFooter';
+import PublicHeader from '@/components/PublicHeader';
 import { site } from '@/lib/site';
 
 const practices = [
   {
-    title: 'Cá nhân & gia đình',
-    description: 'Tư vấn và giải quyết các vấn đề dân sự, hôn nhân gia đình, thừa kế và tài sản.',
+    title: 'Gia đình, tài sản, thừa kế',
+    description: 'Ly hôn, quyền nuôi con, chia tài sản, thừa kế và những tình huống cần được định hướng riêng trước.',
     icon: Users,
     color: 'bg-amber-50 border-amber-100 text-amber-800',
+    href: '/ca-nhan/gia-dinh-ly-hon',
   },
   {
     title: 'Lao động & nhân sự',
-    description: 'Hỗ trợ người lao động và doanh nghiệp trong quan hệ lao động, kỷ luật và tranh chấp.',
+    description: 'Người lao động, doanh nghiệp và HR cần làm đúng luật với hợp đồng, kỷ luật, tái cấu trúc và tranh chấp.',
     icon: BriefcaseBusiness,
     color: 'bg-emerald-50 border-emerald-100 text-emerald-800',
+    href: '/lao-dong-nhan-su',
   },
   {
-    title: 'Doanh nghiệp & hợp đồng',
-    description: 'Tư vấn thường xuyên, rà soát hợp đồng, quản trị nội bộ và tuân thủ pháp luật.',
+    title: 'Doanh nghiệp đang vận hành',
+    description: 'Tư vấn thường xuyên, hợp đồng, nội bộ, cổ đông, rủi ro vận hành và rà soát pháp lý tổng thể.',
     icon: Building2,
     color: 'bg-sky-50 border-sky-100 text-sky-800',
+    href: '/doanh-nghiep',
   },
   {
     title: 'Tranh tụng & thu hồi nợ',
-    description: 'Đánh giá hồ sơ, thương lượng và bảo vệ quyền lợi hợp pháp trong quá trình tố tụng.',
+    description: 'Đánh giá hồ sơ, thương lượng, thu hồi nợ và chuẩn bị hướng xử lý khi vụ việc đã căng thẳng.',
     icon: Gavel,
     color: 'bg-rose-50 border-rose-100 text-rose-800',
+    href: '/tranh-tung-thu-hoi-no',
   },
 ];
 
@@ -51,36 +57,7 @@ const principles = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-canvas text-text-primary selection:bg-accent-gold selection:text-brand-primary">
-      <header className="sticky top-0 z-50 border-b border-border-subtle bg-canvas/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-3" aria-label="An Luật - Trang chủ">
-            <span className="rounded-xl bg-brand-primary p-2 text-accent-gold">
-              <Flower size={20} />
-            </span>
-            <span>
-              <strong className="block font-heading text-lg font-black leading-none text-brand-primary">An Luật</strong>
-              <span className="mt-1 block text-[10px] font-bold uppercase tracking-[0.18em] text-text-secondary">
-                Chọn đúng hướng pháp lý
-              </span>
-            </span>
-          </Link>
-
-          <nav className="hidden items-center gap-6 text-sm font-bold text-text-secondary md:flex" aria-label="Điều hướng chính">
-            <a href="#linh-vuc" className="transition-colors hover:text-brand-primary">Lĩnh vực</a>
-            <a href="#an-luat" className="transition-colors hover:text-brand-primary">Về An Luật</a>
-            <a href="#lien-he" className="transition-colors hover:text-brand-primary">Liên hệ</a>
-          </nav>
-
-          <a
-            href={site.phone.primary.href}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-brand-primary-hover sm:text-sm"
-          >
-            <PhoneCall size={15} />
-            <span className="hidden sm:inline">Gọi An Luật</span>
-            <span className="sm:hidden">Gọi ngay</span>
-          </a>
-        </div>
-      </header>
+      <PublicHeader />
 
       <main>
         <section className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-12 lg:items-center">
@@ -107,13 +84,13 @@ export default function HomePage() {
                 <PhoneCall size={18} />
                 Gọi {site.phone.primary.display}
               </a>
-              <a
-                href="#linh-vuc"
+              <Link
+                href="/1-gio-gap-nhu"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border-medium bg-white px-7 py-4 text-sm font-bold text-brand-primary transition-colors hover:bg-stone-50"
               >
-                Xem lĩnh vực hỗ trợ
+                Tìm hiểu 1 GIỜ GẶP NHƯ
                 <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
 
             <p className="max-w-2xl text-sm leading-relaxed text-text-muted">
@@ -140,7 +117,7 @@ export default function HomePage() {
 
         <section id="linh-vuc" className="border-y border-border-subtle bg-white/60">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
-            <div className="mb-10 max-w-2xl space-y-3">
+          <div className="mb-10 max-w-2xl space-y-3">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-gold">Lĩnh vực trọng tâm</span>
               <h2 className="font-heading text-3xl font-black text-brand-primary md:text-4xl">
                 Hỗ trợ pháp lý cho cá nhân và doanh nghiệp
@@ -152,13 +129,61 @@ export default function HomePage() {
 
             <div className="grid gap-4 md:grid-cols-2">
               {practices.map((practice) => (
-                <article key={practice.title} className={`rounded-3xl border p-7 md:p-8 ${practice.color}`}>
+                <Link key={practice.title} href={practice.href} className={`rounded-3xl border p-7 transition-transform hover:-translate-y-0.5 md:p-8 ${practice.color}`}>
                   <practice.icon size={24} />
                   <h3 className="mt-6 font-heading text-2xl font-bold text-brand-primary">{practice.title}</h3>
                   <p className="mt-3 leading-relaxed text-text-secondary">{practice.description}</p>
-                </article>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">
+                    Xem chi tiết
+                    <ArrowRight size={15} />
+                  </span>
+                </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-5">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-gold">1 GIỜ GẶP NHƯ</span>
+            <h2 className="font-heading text-3xl font-black leading-tight text-brand-primary md:text-5xl">
+              Một giờ để nhìn rõ vấn đề và biết bước tiếp theo.
+            </h2>
+            <p className="max-w-2xl leading-relaxed text-text-secondary">
+              Đây là lối vào phù hợp khi bạn chưa cần kể mọi thứ trên website, nhưng cần một buổi trao đổi riêng để hiểu đúng vấn đề, hồ sơ và cách đi tiếp.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/1-gio-gap-nhu"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-primary px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-brand-primary-hover"
+              >
+                Tìm hiểu 1 GIỜ GẶP NHƯ
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/lien-he"
+                className="inline-flex items-center justify-center rounded-2xl border border-border-medium bg-white px-6 py-4 text-sm font-bold text-brand-primary transition-colors hover:bg-stone-50"
+              >
+                Để An Luật gọi lại
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-border-subtle bg-surface p-8">
+            <p className="text-sm font-bold text-brand-primary">Phù hợp nếu bạn đang cần:</p>
+            <ul className="mt-5 space-y-4 text-text-secondary">
+              {[
+                'Hiểu đúng vấn đề pháp lý mình đang gặp.',
+                'Biết nên chuẩn bị giấy tờ gì trước.',
+                'Biết nên thương lượng, chờ thêm hay xử lý sâu hơn.',
+                'Có định hướng riêng trước khi đưa ra quyết định lớn.',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-brand-secondary" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -171,13 +196,18 @@ export default function HomePage() {
             <p className="leading-relaxed text-text-secondary">
               Được thành lập bởi Luật sư Đinh Thị Quỳnh Như, An Luật cung cấp dịch vụ pháp lý cho cá nhân và doanh nghiệp, đồng thời có chi nhánh tại Bà Rịa - Vũng Tàu từ năm 2020.
             </p>
-            <Link
-              href="/ve-an-luat"
-              className="inline-flex items-center gap-2 border-b-2 border-accent-gold pb-1 text-sm font-bold text-brand-primary"
-            >
-              Tìm hiểu thêm về An Luật
-              <ArrowRight size={15} />
-            </Link>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/ve-an-luat"
+                className="inline-flex items-center gap-2 border-b-2 border-accent-gold pb-1 text-sm font-bold text-brand-primary"
+              >
+                Tìm hiểu thêm về An Luật
+                <ArrowRight size={15} />
+              </Link>
+              <Link href="/luat-su-dinh-thi-quynh-nhu" className="text-sm font-bold text-brand-primary">
+                Hồ sơ Luật sư Quỳnh Như
+              </Link>
+            </div>
           </div>
 
           <div className="rounded-[2rem] border border-border-subtle bg-surface p-8 lg:col-span-7 md:p-10">
@@ -204,6 +234,10 @@ export default function HomePage() {
               <p className="max-w-2xl leading-relaxed text-white/75">
                 Thư ký An Luật sẽ ghi nhận nhu cầu liên hệ, hướng dẫn thông tin cần chuẩn bị và xác nhận cách làm việc phù hợp.
               </p>
+              <Link href="/lien-he" className="inline-flex items-center gap-2 text-sm font-bold text-accent-gold">
+                Xem trang liên hệ đầy đủ
+                <ArrowRight size={15} />
+              </Link>
             </div>
 
             <div className="grid gap-3 lg:col-span-5">
@@ -226,22 +260,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className="border-t border-border-subtle bg-canvas">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm text-text-secondary sm:px-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl space-y-2">
-            <p className="font-bold text-brand-primary">{site.legalName}</p>
-            <p>{site.address}</p>
-            <p className="text-xs leading-relaxed text-text-muted">
-              Nội dung trên website chỉ cung cấp thông tin chung và không thay thế tư vấn pháp lý cho một vụ việc cụ thể.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-5 text-xs font-bold uppercase tracking-wider">
-            <Link href="/ve-an-luat" className="hover:text-brand-primary">Về An Luật</Link>
-            <Link href="/chuyen-nghe" className="hover:text-brand-primary">Chuyện nghề</Link>
-            <Link href="/quyen-rieng-tu" className="hover:text-brand-primary">Quyền riêng tư</Link>
-          </div>
-        </div>
-      </footer>
+      <PublicFooter />
     </div>
   );
 }

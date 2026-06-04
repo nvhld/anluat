@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, PhoneCall, Scale, ShieldCheck } from 'lucide-react';
+import PublicFooter from '@/components/PublicFooter';
+import PublicHeader from '@/components/PublicHeader';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -18,7 +20,9 @@ const services = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-canvas text-text-primary">
+    <div className="min-h-screen bg-canvas text-text-primary">
+      <PublicHeader />
+      <main>
       <div className="mx-auto max-w-5xl space-y-12 px-4 py-8 sm:px-6 md:py-14">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-text-secondary hover:text-brand-primary">
           <ArrowLeft size={16} />
@@ -35,6 +39,14 @@ export default function AboutPage() {
             <p className="leading-relaxed text-text-secondary">
               Từ năm 2020, An Luật mở rộng hoạt động với chi nhánh tại Bà Rịa - Vũng Tàu, đồng thời duy trì hoạt động tại TP. Hồ Chí Minh.
             </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link href="/luat-su-dinh-thi-quynh-nhu" className="text-sm font-bold text-brand-primary">
+                Hồ sơ Luật sư Quỳnh Như
+              </Link>
+              <Link href="/1-gio-gap-nhu" className="text-sm font-bold text-brand-primary">
+                Tìm hiểu 1 GIỜ GẶP NHƯ
+              </Link>
+            </div>
           </div>
 
           <aside className="rounded-3xl border border-border-subtle bg-surface p-8 lg:col-span-5">
@@ -76,6 +88,8 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-    </main>
+      </main>
+      <PublicFooter />
+    </div>
   );
 }
